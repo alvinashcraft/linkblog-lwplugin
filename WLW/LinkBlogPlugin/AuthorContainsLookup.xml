@@ -1,0 +1,26 @@
+﻿<database>
+  <def keyword="sam gentile" author="Sam Gentile" category="Links"/>
+  <def keyword="ayende" author="Oren Eini" category="DotNet"/>
+  <def keyword="ray vernagus" author="Ray Vernagus" category="Miscellaneous"/>
+  <def keyword="camerons" author="Cameron Skinner" category="DotNet"/>
+  <def keyword="clemensreijnen" author="Clemens Reijnen" category="DotNet"/>
+  <def keyword="jasonhaley" author="Jason Haley" category="Links"/>
+  <def keyword="jschementi" author="Jimmy Schementi" category="DotNet"/>
+  <def keyword="lapointe" author="Gary Lapointe" category="Miscellaneous"/>
+  <def keyword="wildermuth" author="Shawn Wildermuth" category="WebDevelopment"/>
+  <def keyword="fervent coder" author="Rob Reynolds" category="DotNet"/>
+  <def keyword="podwysocki" author="Matthew Podwysocki" category="DotNet"/>
+  <def keyword="misfit geek" author="Joe Stagner" category="WebDevelopment"/>
+  <def keyword="joestagner" author="Joe Stagner" category="WebDevelopment"/>
+  <def keyword="andrew stopford" author="Andy Stopford" category="Design"/>
+  <def keyword="jopx" author="Joris Poelmans" category="Miscellaneous"/>
+  <def keyword="beth massi" author="Beth Massi" category="WebDevelopment"/>
+  <def keyword="the evil empire" author="Bertrand Le Roy" category="WebDevelopment"/>
+  <def keyword="kltripp" author="Kimberly Tripp" category="Sql"/>
+  <def keyword="powerscripting" author="Jonathan Walz + Hal Rottenberg" category="Podcasts"/>
+  <def keyword="sharepoint pod show" author="Rob Foster, Nick Swan + Brett Lonsdale" category="Podcasts"/>
+  <def keyword="michael kimsal" author="Michael Kimsal" category="WebDevelopment"/>
+  <def keyword="marc grabanski" author="Marc Grabanski" category="Miscellaneous"/>
+  <def keyword="david giard" author="David Giard" category="Podcasts"/>
+  <def keyword="julian m bucknall" author="Julian M. Bucknall" category="WebDevelopment"/>
+</database>

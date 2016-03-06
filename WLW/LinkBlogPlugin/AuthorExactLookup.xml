@@ -1,0 +1,111 @@
+﻿<database>
+  <def keyword="brada" author="Brad Abrams" category="Miscellaneous"/>
+  <def keyword="pinaldave" author="Pinal Dave" category="Sql"/>
+  <def keyword="plblum" author="Peter Blum" category="Miscellaneous"/>
+  <def keyword="wwagner" author="Bill Wagner" category="DotNet"/>
+  <def keyword="anortham" author="Alan Northam" category="Miscellaneous"/>
+  <def keyword="dotcore" author="Dennis Delimarsky" category="DotNet"/>
+  <def keyword="traskjd" author="JD Trask" category="Miscellaneous"/>
+  <def keyword="holoed" author="Edmondo Pentangelo" category="Miscellaneous"/>
+  <def keyword="glenz" author="Gunther Lenz" category="DotNet"/>
+  <def keyword="bruceky" author="Bruce Kyle" category="Miscellaneous"/>
+  <def keyword="mitchp" author="Mitch Pronschinske" category="Miscellaneous"/>
+  <def keyword="fredrik n" author="Fredrik Normen" category="Xaml"/>
+  <def keyword="ekampf" author="Eran Kampf" category="Miscellaneous"/>
+  <def keyword="sergejus" author="Sergejus Barinovas" category="Miscellaneous"/>
+  <def keyword="zainnab" author="Zain Naboulsi" category="DotNet"/>
+  <def keyword="wynapse" author="Dave Campbell" category="Links"/>
+  <def keyword="xamlmammal" author="Corey Miller" category="Xaml"/>
+  <def keyword="pete.brown" author="Pete Brown" category="Xaml"/>
+  <def keyword="psychlist1972" author="Pete Brown" category="Xaml"/>
+  <def keyword="rickm" author="Rick Minerich" category="Links"/>
+  <def keyword="sergiopereira" author="Sergio Pereira" category="DotNet"/>
+  <def keyword="tina10" author="Tina Summerford" category="Podcasts"/>
+  <def keyword="tina" author="Tina Summerford" category="Podcasts"/>
+  <def keyword="andy@andybeaulieu.com" author="Andy Beaulieu" category="Xaml"/>
+  <def keyword="spdblog" author="SharePoint Designer Team" category="SharePoint"/>
+  <def keyword="pthurrott" author="Paul Thurrott" category="Miscellaneous"/>
+  <def keyword="teichgraf" author="Rene Schulte" category="Xaml"/>
+  <def keyword="hdierking" author="Howard Dierking" category="Miscellaneous"/>
+  <def keyword="dsyme" author="Don Syme" category="DotNet"/>
+  <def keyword="emtucifor" author="Erik" category="Miscellaneous"/>
+  <def keyword="davidlem" author="David Lemphers" category="Miscellaneous"/>
+  <def keyword="david-starr" author="David Starr" category="Design"/>
+  <def keyword="udidahan" author="Udi Dahan" category="Design"/>
+  <def keyword="jpelak" author="John Pelak" category="Miscellaneous"/>
+  <def keyword="pnpguidance" author="David Hayden" category="Design"/>
+  <def keyword="rob_relyea" author="Rob Relyea" category="Xaml"/>
+  <def keyword="mbcrump" author="Michael Crump" category="Xaml"/>
+  <def keyword="rruggeri" author="Roberto Ruggeri" category="Miscellaneous"/>
+  <def keyword="scottgu" author="Scott Guthrie" category="WebDevelopment"/>
+  <def keyword="glucose" author="Scott Hanselman" category="DotNet"/>
+  <def keyword="haacked" author="Phil Haack" category="WebDevelopment"/>
+  <def keyword="schipps" author="Sara J. Chipps" category="Miscellaneous"/>
+  <def keyword="maartenba" author="Maarten Balliauw" category="Xaml"/>
+  <def keyword="zxue" author="Zhiming Xue" category="Miscellaneous"/>
+  <def keyword="schambers" author="Sean Chambers" category="Miscellaneous"/>
+  <def keyword="sacha" author="Sacha Barber" category="Xaml"/>
+  <def keyword="azuidhof" author="Arjan Zuidhof" category="Links"/>
+  <def keyword="daveburke" author="Dave Burke" category="Links"/>
+  <def keyword="digimortal" author="Gunnar Peipman" category="DotNet"/>
+  <def keyword="gunnar" author="Gunnar Peipman" category="DotNet"/>
+  <def keyword="erobillard" author="Eli Robillard" category="Miscellaneous"/>
+  <def keyword="goodidea" author="yuanjian" category="Links"/>
+  <def keyword="habibh" author="Habib Heydarian" category="Miscellaneous"/>
+  <def keyword="markhneedham" author="Mark Needham" category="WebDevelopment"/>
+  <def keyword="matt-milner" author="Matt Milner" category="Miscellaneous"/>
+  <def keyword="wzack" author="Bill Zack" category="Miscellaneous"/>
+  <def keyword="kirke" author="Kirk Evans" category="Miscellaneous"/>
+  <def keyword="davedev" author="Dave Isbitski" category="Miscellaneous"/>
+  <def keyword="pkoen" author="Peter Koen" category="Miscellaneous"/>
+  <def keyword="saraford" author="Sara Ford" category="DotNet"/>
+  <def keyword="sarahintampa" author="Sarah Perez" category="Miscellaneous"/>
+  <def keyword="stefan_gossner" author="Stefan Gossner" category="Miscellaneous"/>
+  <def keyword="sqlartist" author="Trevor Dwyer" category="Sql"/>
+  <def keyword="derekgreer" author="Derek Greer" category="Design"/>
+  <def keyword="uncle bob" author="'Uncle Bob' Martin" category="Design"/>
+  <def keyword="steverowe" author="Steve Rowe" category="Miscellaneous"/>
+  <def keyword="simonech" author="Simone Chiaretta" category="WebDevelopment"/>
+  <def keyword="mtaulty" author="Mike Taulty" category="Xaml"/>
+  <def keyword="sashag" author="Sasha Goldshtein" category="DotNet"/>
+  <def keyword="sqldenis" author="Denis Gobo" category="Sql"/>
+  <def keyword="bogardj" author="Jimmy Bogard" category="WebDevelopment"/>
+  <def keyword="alkampfer" author="Gian Maria Ricci" category="Miscellaneous"/>
+  <def keyword="mikeormond" author="Mike Ormond" category="DotNet"/>
+  <def keyword="shair" author="Shai Raiten" category="DotNet"/>
+  <def keyword="crpietschmann" author="Chris Pietschmann" category="DotNet"/>
+  <def keyword="delay" author="David Anson" category="Xaml"/>
+  <def keyword="derick.bailey" author="Derick Bailey" category="WebDevelopment"/>
+  <def keyword="gduthie" author="G. Andrew Duthie" category="Community"/>
+  <def keyword="devhammer" author="G. Andrew Duthie" category="Community"/>
+  <def keyword="jesseliberty" author="Jesse Liberty" category="Xaml"/>
+  <def keyword="danielfe" author="Dan Fernandez" category="Miscellaneous"/>
+  <def keyword="frankarr" author="Frank Arrigo" category="Miscellaneous"/>
+  <def keyword="kimspilker" author="Kim Spilker" category="Miscellaneous"/>
+  <def keyword="piccoloprincipe" author="Giorgio Sironi" category="WebDevelopment"/>
+  <def keyword="onpnt" author="Ted Krueger" category="Sql"/>
+  <def keyword="simonsabin" author="Simon Sabin" category="Sql"/>
+  <def keyword="jsonmez" author="John Sonmez" category="Design"/>
+  <def keyword="peli de halleux" author="Jonathan de Halleux" category="Design"/>
+  <def keyword="angelab" author="Angela Dugan" category="DotNet"/>
+  <def keyword="sptblog" author="SharePoint Team" category="SharePoint"/>
+  <def keyword="keyvan@nayyeri.net" author="Keyvan Nayyeri" category="WebDevelopment"/>
+  <def keyword="keyvan" author="Keyvan Nayyeri" category="WebDevelopment"/>
+  <def keyword="james.kovacs" author="James Kovacs" category="Design"/>
+  <def keyword="mbratton" author="Marcus Bratton" category="Miscellaneous"/>
+  <def keyword="lmoroney@microsoft.com" author="Lawrence Moroney" category="Xaml"/>
+  <def keyword="jprosise" author="Jeff Prosise" category="Xaml"/>
+  <def keyword="deborahk" author="Deborah Kurata" category="DotNet"/>
+  <def keyword="jamesbrundage" author="James Brundage" category="Miscellaneous"/>
+  <def keyword="heratech" author="Julie Stickler" category="DotNet"/>
+  <def keyword="jayneu" author="Jay Esguerra" category="Miscellaneous"/>
+  <def keyword="elijahmanor" author="Elijah Manor" category="WebDevelopment"/>
+  <def keyword="david hill's weblog" author="David Hll" category="Miscellaneous"/>
+  <def keyword="gojko" author="Gojko Adzic" category="Design"/>
+  <def keyword="jamiet" author="Jamie Thomson" category="Sql"/>
+  <def keyword="jamie.thomson" author="Jamie Thomson" category="Sql"/>
+  <def keyword="xnablog" author="Kathleen Sanders" category="Links"/>
+  <def keyword="gregorylong" author="Gregory Long" category="Miscellaneous"/>
+  <def keyword="bhitney" author="Brian Hitney" category="Miscellaneous"/>
+  <def keyword="vbandi" author="András Velvárt" category="Xaml"/>
+</database>

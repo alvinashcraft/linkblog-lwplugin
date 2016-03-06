@@ -1,0 +1,82 @@
+﻿<database>
+    <def keyword="sharepoint" category="SharePoint"/>
+    <def keyword="powershell" category="PowerShell"/>
+    <def keyword="wmi" category="PowerShell"/>
+    <def keyword="silverlight" category="Xaml"/>
+    <def keyword="windows phone" category="Xaml"/>
+    <def keyword="mvvm" category="Xaml"/>
+    <def keyword="wpf" category="Xaml"/>
+    <def keyword="winrt" category="Xaml"/>
+    <def keyword="metro" category="Xaml"/>
+    <def keyword="xaml" category="Xaml"/>
+    <def keyword="blend" category="Xaml"/>
+    <def keyword="wp7" category="Xaml"/>
+    <def keyword="wp8" category="Xaml"/>
+    <def keyword="asp.net" category="WebDevelopment"/>
+    <def keyword="mvc" category="WebDevelopment"/>
+    <def keyword="expression web" category="WebDevelopment"/>
+    <def keyword="jquery" category="WebDevelopment"/>
+    <def keyword="javascript" category="WebDevelopment"/>
+    <def keyword="css" category="WebDevelopment"/>
+    <def keyword="wordpress" category="WebDevelopment"/>
+    <def keyword="html" category="WebDevelopment"/>
+    <def keyword="winjs" category="WebDevelopment"/>
+    <def keyword="signalr" category="WebDevelopment"/>
+    <def keyword="kendo" category="WebDevelopment"/>
+    <def keyword="webstorm" category="WebDevelopment"/>
+    <def keyword="knockout" category="WebDevelopment"/>
+    <def keyword="durandal" category="WebDevelopment"/>
+    <def keyword="windows azure" category="WebDevelopment"/>
+    <def keyword="php" category="WebDevelopment"/>
+    <def keyword="web api" category="WebDevelopment"/>
+    <def keyword=".js" category="WebDevelopment"/>
+    <def keyword="angular" category="WebDevelopment"/>
+    <def keyword="backbone" category="WebDevelopment"/>
+    <def keyword="breeze" category="WebDevelopment"/>
+    <def keyword="sql server" category="Sql"/>
+    <def keyword="ssrs" category="Sql"/>
+    <def keyword="ssis" category="Sql"/>
+    <def keyword="raven" category="Sql"/>
+    <def keyword="mysql" category="Sql"/>
+    <def keyword="ssas" category="Sql"/>
+    <def keyword="sql compact" category="Sql"/>
+    <def keyword="ssdt" category="Sql"/>
+    <def keyword="oracle" category="Sql"/>
+    <def keyword="nosql" category="Sql"/>
+    <def keyword="sql azure" category="Sql"/>
+    <def keyword="dmv" category="Sql"/>
+    <def keyword="cqrs" category="Design"/>
+    <def keyword="agile" category="Design"/>
+    <def keyword="kanban" category="Design"/>
+    <def keyword="bdd" category="Design"/>
+    <def keyword="tdd" category="Design"/>
+    <def keyword="scrum" category="Design"/>
+    <def keyword="unit test" category="Design"/>
+    <def keyword="patterns" category="Design"/>
+    <def keyword="estimation" category="Design"/>
+    <def keyword="android" category="Mobile"/>
+    <def keyword="ios" category="Mobile"/>
+    <def keyword="phonegap" category="Mobile"/>
+    <def keyword="cordova" category="Mobile"/>
+    <def keyword="xamarin" category="Mobile"/>
+    <def keyword="xcode" category="Mobile"/>
+    <def keyword="iphone" category="Mobile"/>
+    <def keyword="ipad" category="Mobile"/>
+    <def keyword="visual studio" category="DotNet"/>
+    <def keyword="c#" category="DotNet"/>
+    <def keyword="vb" category="DotNet"/>
+    <def keyword="f#" category="DotNet"/>
+    <def keyword="vs2010" category="DotNet"/>
+    <def keyword="vs2012" category="DotNet"/>
+    <def keyword="vs2013" category="DotNet"/>
+    <def keyword="wcf" category="DotNet"/>
+    <def keyword="nuget" category="DotNet"/>
+    <def keyword="linq" category="DotNet"/>
+    <def keyword="tfs" category="DotNet"/>
+    <def keyword="resharper" category="DotNet"/>
+    <def keyword="justcode" category="DotNet"/>
+    <def keyword="async" category="DotNet"/>
+    <def keyword=".net framework" category="DotNet"/>
+    <def keyword="msbuild" category="DotNet"/>
+    <def keyword="podcast" category="Podcasts"/>
+</database>
