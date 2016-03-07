@@ -3,3 +3,9 @@
 ################################################################################
 
 /WLW/LinkBlogPlugin/bin
+/WLW/LinkBlogPlugin/obj
+/WLW/LinkBlogPlugin/packages/Newtonsoft.Json.8.0.2
+/WLW/LinkBlogPlugin/packages/RestSharp.105.2.3
+/WLW/LinkBlogPlugin/AlvinAshcraft.LinkBuilder.csproj.user
+/WLW/LinkBlogPlugin/AlvinAshcraft.LinkBuilder.sln.GhostDoc.xml
+/WLW/LinkBlogPlugin/.vs/AlvinAshcraft.LinkBuilder/v14/.suo

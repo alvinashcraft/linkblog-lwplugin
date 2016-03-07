@@ -6,28 +6,31 @@
 //   Defines the StarredLinkerPlugin type.
 // </summary>
 //---------------------------------------------------------------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.ServiceModel.Syndication;
+using System.Text;
+using System.Windows.Forms;
+using System.Xml;
+
+using Newtonsoft.Json;
+using RestSharp;
+using RestSharp.Authenticators;
+using WindowsLive.Writer.Api;
+
+using AlvinAshcraft.LinkBuilder.Contracts;
+using AlvinAshcraft.LinkBuilder.Helpers;
+
 namespace AlvinAshcraft.LinkBuilder
 {
-    using Helpers;
-
-    using Contracts;
-    using Newtonsoft.Json;
-    using RestSharp;
-    using System;
-    using System.Collections.Generic;
-    using System.IO;
-    using System.Linq;
-    using System.ServiceModel.Syndication;
-    using System.Text;
-    using System.Windows.Forms;
-    using System.Xml;
-    using WindowsLive.Writer.Api;
-
     /// <summary>
     /// WLW Plugin to generate links from a shared feed.
     /// </summary>
-    [WriterPluginAttribute("61B83824-ADEA-401d-86A1-87282C425E37", "Insert Shared Links", ImagePath = "DEW_Logo128.png", PublisherUrl = "http://www.alvinashcraft.com", Description = "A plugin to insert shared links from NewsBlur or an RSS/ATOM feed.", HasEditableOptions = true)]
-    [InsertableContentSourceAttribute("Insert Shared Links")]
+    [WriterPlugin("61B83824-ADEA-401d-86A1-87282C425E37", "Insert Shared Links", ImagePath = "DEW_Logo128.png", PublisherUrl = "http://www.alvinashcraft.com", Description = "A plugin to insert shared links from NewsBlur or an RSS/ATOM feed.", HasEditableOptions = true)]
+    [InsertableContentSource("Insert Shared Links")]
     public class StarredLinkerPlugin : ContentSource
     {
         /// <summary>
@@ -87,7 +90,7 @@ namespace AlvinAshcraft.LinkBuilder
         private static IEnumerable<FileInfo> GetFiles(string path, string fileExtension)
         {
             var dirInfo = new DirectoryInfo(path);
-            return dirInfo.GetFiles(string.Format("*{0}", fileExtension), SearchOption.TopDirectoryOnly).ToList();
+            return dirInfo.GetFiles(String.Format("*{0}", fileExtension), SearchOption.TopDirectoryOnly).ToList();
         }
 
         /// <summary>
@@ -146,7 +149,7 @@ namespace AlvinAshcraft.LinkBuilder
                 }
             }
 
-            List<Category> categories = NameAndGetHeadings();
+            var categories = NameAndGetHeadings();
             var linkListing = new StringBuilder();
 
             categories.ForEach(category =>
@@ -424,8 +427,10 @@ namespace AlvinAshcraft.LinkBuilder
             if (url.Contains("charlespetzold")) return new AuthorResult("Charles Petzold", new Category(CategoryType.Xaml));
             if (url.Contains("blackwasp")) return new AuthorResult("Richard Carr", new Category(CategoryType.Xaml));
             if (url.Contains("trelford")) return new AuthorResult("Phillip Trelford", new Category());
+            if (url.Contains("rthand.com")) return new AuthorResult("Miha Markic", new Category(CategoryType.DotNet));
             if (url.Contains("openmymind.net")) return new AuthorResult("Karl Seguin", new Category(CategoryType.WebDevelopment));
             if (url.Contains("andrewconnell")) return new AuthorResult("Andrew Connell", new Category(CategoryType.SharePoint));
+            if (url.Contains("windowsappdev.com") || url.Contains("allaboutxamarin.com")) return new AuthorResult("Dan Rigby", new Category(CategoryType.Links));
 
             return new AuthorResult(authorName, new Category());
         }
