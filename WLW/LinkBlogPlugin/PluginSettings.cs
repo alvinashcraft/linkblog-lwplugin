@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using WindowsLive.Writer.Api;
+﻿using OpenLiveWriter.Api;
 
 namespace AlvinAshcraft.LinkBuilder
 {

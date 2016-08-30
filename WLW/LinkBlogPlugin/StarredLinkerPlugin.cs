@@ -19,10 +19,9 @@ using System.Xml;
 using Newtonsoft.Json;
 using RestSharp;
 using RestSharp.Authenticators;
-using WindowsLive.Writer.Api;
-
 using AlvinAshcraft.LinkBuilder.Contracts;
 using AlvinAshcraft.LinkBuilder.Helpers;
+using OpenLiveWriter.Api;
 
 namespace AlvinAshcraft.LinkBuilder
 {
