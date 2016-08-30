@@ -101,7 +101,11 @@ namespace AlvinAshcraft.LinkBuilder
         {
             string newContent = String.Empty;
 
-            using (var reader = XmlReader.Create(String.Format("{0}?n={1}", _options.FeedUrlOption, _options.MaxPostsOption)))
+            var xmlSettings = new XmlReaderSettings
+            {
+                DtdProcessing = DtdProcessing.Parse
+            };
+            using (var reader = XmlReader.Create(String.Format("{0}?n={1}", _options.FeedUrlOption, _options.MaxPostsOption), xmlSettings))
             {
                 if (feedFormatter == null || !feedFormatter.CanRead(reader))
                 {
