@@ -13,6 +13,8 @@
     <def keyword="wp7" category="Xaml"/>
     <def keyword="wp8" category="Xaml"/>
     <def keyword="asp.net" category="WebDevelopment"/>
+    <def keyword="aws" category="WebDevelopment"/>
+    <def keyword="docker" category="WebDevelopment"/>
     <def keyword="mvc" category="WebDevelopment"/>
     <def keyword="expression web" category="WebDevelopment"/>
     <def keyword="jquery" category="WebDevelopment"/>
@@ -26,7 +28,8 @@
     <def keyword="webstorm" category="WebDevelopment"/>
     <def keyword="knockout" category="WebDevelopment"/>
     <def keyword="durandal" category="WebDevelopment"/>
-    <def keyword="windows azure" category="WebDevelopment"/>
+    <def keyword="sql azure" category="Sql"/>
+    <def keyword="azure" category="WebDevelopment"/>
     <def keyword="php" category="WebDevelopment"/>
     <def keyword="web api" category="WebDevelopment"/>
     <def keyword=".js" category="WebDevelopment"/>
@@ -43,7 +46,6 @@
     <def keyword="ssdt" category="Sql"/>
     <def keyword="oracle" category="Sql"/>
     <def keyword="nosql" category="Sql"/>
-    <def keyword="sql azure" category="Sql"/>
     <def keyword="dmv" category="Sql"/>
     <def keyword="cqrs" category="Design"/>
     <def keyword="agile" category="Design"/>
@@ -58,7 +60,7 @@
     <def keyword="ios" category="Mobile"/>
     <def keyword="phonegap" category="Mobile"/>
     <def keyword="cordova" category="Mobile"/>
-    <def keyword="xamarin" category="Mobile"/>
+    <def keyword="xamarin" category="Xaml"/>
     <def keyword="xcode" category="Mobile"/>
     <def keyword="iphone" category="Mobile"/>
     <def keyword="ipad" category="Mobile"/>
@@ -69,6 +71,8 @@
     <def keyword="vs2010" category="DotNet"/>
     <def keyword="vs2012" category="DotNet"/>
     <def keyword="vs2013" category="DotNet"/>
+    <def keyword="vs2015" category="DotNet"/>
+    <def keyword="vs2017" category="DotNet"/>
     <def keyword="wcf" category="DotNet"/>
     <def keyword="nuget" category="DotNet"/>
     <def keyword="linq" category="DotNet"/>
@@ -79,4 +83,8 @@
     <def keyword=".net framework" category="DotNet"/>
     <def keyword="msbuild" category="DotNet"/>
     <def keyword="podcast" category="Podcasts"/>
+    <def keyword="react native" category="Mobile"/>
+    <def keyword="ionic" category="Mobile"/>
+    <def keyword="alexa" category="Mobile"/>
+    <def keyword="react" category="WebDevelopment"/>
 </database>
