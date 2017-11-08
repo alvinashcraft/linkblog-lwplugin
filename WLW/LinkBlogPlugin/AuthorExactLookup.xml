@@ -35,7 +35,7 @@
   <def keyword="jpelak" author="John Pelak" category="Miscellaneous"/>
   <def keyword="pnpguidance" author="David Hayden" category="Design"/>
   <def keyword="rob_relyea" author="Rob Relyea" category="Xaml"/>
-  <def keyword="mbcrump" author="Michael Crump" category="Xaml"/>
+  <def keyword="mbcrump" author="Michael Crump" category="WebDevelopment"/>
   <def keyword="rruggeri" author="Roberto Ruggeri" category="Miscellaneous"/>
   <def keyword="scottgu" author="Scott Guthrie" category="WebDevelopment"/>
   <def keyword="glucose" author="Scott Hanselman" category="DotNet"/>
@@ -47,8 +47,8 @@
   <def keyword="sacha" author="Sacha Barber" category="Xaml"/>
   <def keyword="azuidhof" author="Arjan Zuidhof" category="Links"/>
   <def keyword="daveburke" author="Dave Burke" category="Links"/>
-  <def keyword="digimortal" author="Gunnar Peipman" category="DotNet"/>
-  <def keyword="gunnar" author="Gunnar Peipman" category="DotNet"/>
+  <def keyword="digimortal" author="Gunnar Peipman" category="WebDevelopment"/>
+  <def keyword="gunnar" author="Gunnar Peipman" category="WebDevelopment"/>
   <def keyword="erobillard" author="Eli Robillard" category="Miscellaneous"/>
   <def keyword="goodidea" author="yuanjian" category="Links"/>
   <def keyword="habibh" author="Habib Heydarian" category="Miscellaneous"/>
@@ -56,7 +56,7 @@
   <def keyword="matt-milner" author="Matt Milner" category="Miscellaneous"/>
   <def keyword="wzack" author="Bill Zack" category="Miscellaneous"/>
   <def keyword="kirke" author="Kirk Evans" category="Miscellaneous"/>
-  <def keyword="davedev" author="Dave Isbitski" category="Miscellaneous"/>
+  <def keyword="davedev" author="Dave Isbitski" category="Mobile"/>
   <def keyword="pkoen" author="Peter Koen" category="Miscellaneous"/>
   <def keyword="saraford" author="Sara Ford" category="DotNet"/>
   <def keyword="sarahintampa" author="Sarah Perez" category="Miscellaneous"/>
