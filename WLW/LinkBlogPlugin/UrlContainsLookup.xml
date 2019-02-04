@@ -88,4 +88,9 @@
   <def keyword="odetocode" author="K. Scott Allen" category="WebDevelopment"/>
   <def keyword="davepaquette" author="David Paquette" category="WebDevelopment"/>
   <def keyword="revisionpath" author="Maurice Cherry" category="Podcasts"/>
+  <def keyword="codenewbie" author="CodeNewbie Team" category="Podcasts"/>
+  <def keyword="softwareengineeringdaily" author="Jeff Meyerson" category="Podcasts"/>
+  <def keyword="mergeconflict" author="James Montemagno" category="Podcasts"/>
+  <def keyword="developertea" author="Jonathan Cutrell" category="Podcasts"/>
+  <def keyword="weeklydevtips" author="Steve Smith" category="Podcasts"/>
 </database>

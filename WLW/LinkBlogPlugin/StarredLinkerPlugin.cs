@@ -214,7 +214,7 @@ namespace AlvinAshcraft.LinkBuilder
 
             var stories = JsonConvert.DeserializeObject<Rootobject>(response.Content).stories;
 
-            var storyList = stories.Where(s => DateTime.Parse(s.story_date) > GetLastBlogDate().AddHours(_options.BufferOption * -1))
+            var storyList = stories.Where(s => DateTime.Parse(s.shared_date) > GetLastBlogDate().AddHours(_options.BufferOption * -1))
                                             .OrderBy(s => s.story_authors)
                                             .ThenBy(s => s.story_date).ToList();
 
@@ -233,7 +233,7 @@ namespace AlvinAshcraft.LinkBuilder
         /// <returns></returns>
         private Category GetPostCategory(BlogEntry entry)
         {
-            return _lookupHelper.GetCategoryByKeyword(entry.Title, entry.AuthorInfo.DefaultCategory);
+            return _lookupHelper.GetCategoryByKeyword(entry.Title.ToLower(), entry.AuthorInfo.DefaultCategory);
         }
 
         /// <summary>

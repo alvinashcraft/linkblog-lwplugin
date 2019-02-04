@@ -204,6 +204,11 @@
             0,
             0,
             0});
+            this.BufferNumericUpDown.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
             this.BufferNumericUpDown.Name = "BufferNumericUpDown";
             this.BufferNumericUpDown.Size = new System.Drawing.Size(139, 20);
             this.BufferNumericUpDown.TabIndex = 12;

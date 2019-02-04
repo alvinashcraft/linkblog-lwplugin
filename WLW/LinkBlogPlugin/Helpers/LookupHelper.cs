@@ -28,17 +28,17 @@ namespace AlvinAshcraft.LinkBuilder.Helpers
                 XDocument.Load($"{AssemblyDirectory}\\CategoryLookup.xml")
                     .Descendants("def")
                     .ToDictionary(e1 => (string)e1.Attribute("keyword"), e2 => (string)e2.Attribute("category"));
-            
+
             _authorContainsLookupDictionary =
                 XDocument.Load($"{AssemblyDirectory}\\AuthorContainsLookup.xml")
                     .Descendants("def")
                     .ToDictionary(e1 => (string)e1.Attribute("keyword"), e2 => new Tuple<string, string>((string)e2.Attribute("author"), (string)e2.Attribute("category")));
-            
+
             _authorExactLookupDictionary =
                 XDocument.Load($"{AssemblyDirectory}\\AuthorExactLookup.xml")
                     .Descendants("def")
                     .ToDictionary(e1 => (string)e1.Attribute("keyword"), e2 => new Tuple<string, string>((string)e2.Attribute("author"), (string)e2.Attribute("category")));
-            
+
             _urlContainsLookupDictionary =
                 XDocument.Load($"{AssemblyDirectory}\\UrlContainsLookup.xml")
                     .Descendants("def")
@@ -53,12 +53,11 @@ namespace AlvinAshcraft.LinkBuilder.Helpers
         /// <returns>Category.</returns>
         public Category GetCategoryByKeyword(string keyword, Category defaultCategory)
         {
-            foreach (string kw in _categoryLookupDictionary.Keys.Where(kw => keyword.ToLower().Contains(kw)))
-            {
-                return new Category((CategoryType)Enum.Parse(typeof(CategoryType), _categoryLookupDictionary[kw]));
-            }
+            var result = _categoryLookupDictionary.Keys.FirstOrDefault(keyword.Contains);
 
-            return defaultCategory;
+            return !string.IsNullOrWhiteSpace(result)
+                ? new Category((CategoryType) Enum.Parse(typeof(CategoryType), _categoryLookupDictionary[result]))
+                : defaultCategory;
         }
 
         /// <summary>
@@ -107,14 +106,10 @@ namespace AlvinAshcraft.LinkBuilder.Helpers
         {
             var result = _urlContainsLookupDictionary.Keys.FirstOrDefault(url.Contains);
 
-            if (!string.IsNullOrWhiteSpace(result))
-            {
-                return new AuthorResult(_urlContainsLookupDictionary[result].Item1,
-                    new Category((CategoryType) Enum.Parse(typeof(CategoryType),
-                        _urlContainsLookupDictionary[result].Item2)));
-            }
-
-            return new AuthorResult(authorName, new Category());
+            return !string.IsNullOrWhiteSpace(result)
+                ? new AuthorResult(_urlContainsLookupDictionary[result].Item1,
+                    new Category((CategoryType) Enum.Parse(typeof(CategoryType), _urlContainsLookupDictionary[result].Item2)))
+                : new AuthorResult(authorName, new Category());
         }
 
         /// <summary>
