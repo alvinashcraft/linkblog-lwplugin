@@ -93,4 +93,8 @@
   <def keyword="mergeconflict" author="James Montemagno" category="Podcasts"/>
   <def keyword="developertea" author="Jonathan Cutrell" category="Podcasts"/>
   <def keyword="weeklydevtips" author="Steve Smith" category="Podcasts"/>
+  <def keyword="wakeupandcode" author="Shahed Chowdhuri" category="WebDevelopment"/>
+  <def keyword="ericlippert" author="Eric Lippert" category="DotNet"/>
+  <def keyword="thepolyglotdeveloper" author="Nic Raboy" category="WebDevelopment"/>
+  <def keyword="leastprivilege" author="Dominick Baier" category="WebDevelopment"/>
 </database>
