@@ -120,7 +120,7 @@ namespace AlvinAshcraft.LinkBuilder
 
                 var items =
                     feedFormatter.Feed.Items.OfType<SyndicationItem>()
-                        .Where(item => item.LastUpdatedTime.DateTime > GetLastBlogDate().AddHours(_options.BufferOption * -1))
+                        .Where(item => item.LastUpdatedTime.DateTime > GetLastBlogDate(false).AddHours(_options.BufferOption * -1))
                         .OrderBy(item => item.Authors.FirstOrDefault().Name)
                         .ThenBy(item => item.LastUpdatedTime.DateTime)
                         .Select(item =>
@@ -214,7 +214,7 @@ namespace AlvinAshcraft.LinkBuilder
 
             var stories = JsonConvert.DeserializeObject<Rootobject>(response.Content).stories;
 
-            var storyList = stories.Where(s => DateTime.Parse(s.shared_date) > GetLastBlogDate().AddHours(_options.BufferOption * -1))
+            var storyList = stories.Where(s => DateTime.Parse(s.shared_date) > GetLastBlogDate(true).AddHours(_options.BufferOption * -1))
                                             .OrderBy(s => s.story_authors)
                                             .ThenBy(s => s.story_date).ToList();
 
@@ -364,7 +364,7 @@ namespace AlvinAshcraft.LinkBuilder
         /// Gets the last blog date.
         /// </summary>
         /// <returns>DateTime of the last blog posting.</returns>
-        private DateTime GetLastBlogDate()
+        private DateTime GetLastBlogDate(bool convertToUtc)
         {
             IEnumerable<FileInfo> theFiles = GetFiles(_options.PostPathOption, ".wpost");
 
@@ -375,7 +375,9 @@ namespace AlvinAshcraft.LinkBuilder
 
             List<FileInfo> matchingFiles = files.ToList();
 
-            return matchingFiles.Count > 0 ? matchingFiles[0].CreationTime : DateTime.Now.AddDays(-1);
+            DateTime localDateTime = matchingFiles.Count > 0 ? matchingFiles[0].CreationTime : DateTime.Now.AddDays(-1);
+
+            return convertToUtc ? localDateTime.ToUniversalTime() : localDateTime;
         }
 
         /// <summary>
