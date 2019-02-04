@@ -1,13 +1,4 @@
-﻿//--------------------------------------------------------------------------------------------------------------------- 
-// <copyright file="StarredLinkerPlugin.cs" company="Bit Tappers">
-//   Copyright by Alvin Ashcraft 2009 - Bit Tappers.
-// </copyright>
-// <summary>
-//   Defines the StarredLinkerPlugin type.
-// </summary>
-//---------------------------------------------------------------------------------------------------------------------
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -37,6 +28,8 @@ namespace AlvinAshcraft.LinkBuilder
         /// Stores the options for the plugin.
         /// </summary>
         private PluginSettings _options;
+
+        private LookupHelper _lookupHelper = new LookupHelper();
         
         /// <summary>
         /// Initializes the specified plugin options.
@@ -238,9 +231,9 @@ namespace AlvinAshcraft.LinkBuilder
         /// </summary>
         /// <param name="entry">The blog entry.</param>
         /// <returns></returns>
-        private static Category GetPostCategory(BlogEntry entry)
+        private Category GetPostCategory(BlogEntry entry)
         {
-            return LookupHelper.GetCategoryByKeyword(entry.Title, entry.AuthorInfo.DefaultCategory);
+            return _lookupHelper.GetCategoryByKeyword(entry.Title, entry.AuthorInfo.DefaultCategory);
         }
 
         /// <summary>
@@ -249,7 +242,7 @@ namespace AlvinAshcraft.LinkBuilder
         /// <param name="author">The author.</param>
         /// <param name="url">The URL.</param>
         /// <returns></returns>
-        private static AuthorResult GetBlogAuthor(string author, string url)
+        private AuthorResult GetBlogAuthor(string author, string url)
         {
             author = author ?? string.Empty;
             url = url ?? string.Empty;
@@ -341,9 +334,9 @@ namespace AlvinAshcraft.LinkBuilder
         /// </summary>
         /// <param name="authorName">Name of the author.</param>
         /// <returns>An author result for the lookup.</returns>
-        private static AuthorResult CheckAuthorContains(string authorName)
+        private AuthorResult CheckAuthorContains(string authorName)
         {
-            return LookupHelper.GetAuthorInfoByName(authorName, false);
+            return _lookupHelper.GetAuthorInfoByName(authorName, false);
         }
 
         /// <summary>
@@ -351,9 +344,9 @@ namespace AlvinAshcraft.LinkBuilder
         /// </summary>
         /// <param name="authorName">Name of the author.</param>
         /// <returns>An author result for the lookup.</returns>
-        private static AuthorResult FindExactAuthorMatch(string authorName)
+        private AuthorResult FindExactAuthorMatch(string authorName)
         {
-            return LookupHelper.GetAuthorInfoByName(authorName, true);
+            return _lookupHelper.GetAuthorInfoByName(authorName, true);
         }
 
         /// <summary>
@@ -362,9 +355,9 @@ namespace AlvinAshcraft.LinkBuilder
         /// <param name="authorName">Name of the author.</param>
         /// <param name="url">The URL.</param>
         /// <returns>An author result for the lookup.</returns>
-        private static AuthorResult CheckUrlContains(string authorName, string url)
+        private AuthorResult CheckUrlContains(string authorName, string url)
         {
-            return LookupHelper.GetAuthorInfoByUrl(authorName, url);
+            return _lookupHelper.GetAuthorInfoByUrl(authorName, url);
         }
 
         /// <summary>

@@ -9,48 +9,40 @@ namespace AlvinAshcraft.LinkBuilder.Helpers
     using System.Reflection;
     using System.Xml.Linq;
 
-    public static class LookupHelper
+    public class LookupHelper
     {
-        private static readonly IDictionary<string, string> CategoryLookupDictionary;
+        private readonly IDictionary<string, string> _categoryLookupDictionary;
 
-        private static readonly IDictionary<string, Tuple<string, string>> AuthorExactLookupDictionary;
+        private readonly IDictionary<string, Tuple<string, string>> _authorExactLookupDictionary;
 
-        private static readonly IDictionary<string, Tuple<string, string>> AuthorContainsLookupDictionary;
+        private readonly IDictionary<string, Tuple<string, string>> _authorContainsLookupDictionary;
 
-        private static readonly IDictionary<string, Tuple<string, string>> UrlContainsLookupDictionary;
+        private readonly IDictionary<string, Tuple<string, string>> _urlContainsLookupDictionary;
 
         /// <summary>
         /// Initializes static members of the <see cref="LookupHelper"/> class.
         /// </summary>
-        static LookupHelper()
+        public LookupHelper()
         {
-            string file = File.ReadAllText($"{AssemblyDirectory}\\CategoryLookup.xml");
-
-            CategoryLookupDictionary =
-                XElement.Parse(file)
-                    .Elements("def")
-                    .ToDictionary(el => (string)el.Attribute("keyword"), el => (string)el.Attribute("category"));
-
-            string fileContains = File.ReadAllText($"{AssemblyDirectory}\\AuthorContainsLookup.xml");
-
-            AuthorContainsLookupDictionary =
-                XElement.Parse(fileContains)
-                    .Elements("def")
-                    .ToDictionary(el => (string)el.Attribute("keyword"), el => new Tuple<string, string>((string)el.Attribute("author"), (string)el.Attribute("category")));
-
-            string fileExact = File.ReadAllText($"{AssemblyDirectory}\\AuthorExactLookup.xml");
-
-            AuthorExactLookupDictionary =
-                XElement.Parse(fileExact)
-                    .Elements("def")
-                    .ToDictionary(el => (string)el.Attribute("keyword"), el => new Tuple<string, string>((string)el.Attribute("author"), (string)el.Attribute("category")));
-
-            string fileUrl = File.ReadAllText($"{AssemblyDirectory}\\UrlContainsLookup.xml");
-
-            UrlContainsLookupDictionary =
-                XElement.Parse(fileUrl)
-                    .Elements("def")
-                    .ToDictionary(el => (string)el.Attribute("keyword"), el => new Tuple<string, string>((string)el.Attribute("author"), (string)el.Attribute("category")));
+            _categoryLookupDictionary =
+                XDocument.Load($"{AssemblyDirectory}\\CategoryLookup.xml")
+                    .Descendants("def")
+                    .ToDictionary(e1 => (string)e1.Attribute("keyword"), e2 => (string)e2.Attribute("category"));
+            
+            _authorContainsLookupDictionary =
+                XDocument.Load($"{AssemblyDirectory}\\AuthorContainsLookup.xml")
+                    .Descendants("def")
+                    .ToDictionary(e1 => (string)e1.Attribute("keyword"), e2 => new Tuple<string, string>((string)e2.Attribute("author"), (string)e2.Attribute("category")));
+            
+            _authorExactLookupDictionary =
+                XDocument.Load($"{AssemblyDirectory}\\AuthorExactLookup.xml")
+                    .Descendants("def")
+                    .ToDictionary(e1 => (string)e1.Attribute("keyword"), e2 => new Tuple<string, string>((string)e2.Attribute("author"), (string)e2.Attribute("category")));
+            
+            _urlContainsLookupDictionary =
+                XDocument.Load($"{AssemblyDirectory}\\UrlContainsLookup.xml")
+                    .Descendants("def")
+                    .ToDictionary(e1 => (string)e1.Attribute("keyword"), e2 => new Tuple<string, string>((string)e2.Attribute("author"), (string)e2.Attribute("category")));
         }
 
         /// <summary>
@@ -59,11 +51,11 @@ namespace AlvinAshcraft.LinkBuilder.Helpers
         /// <param name="keyword">The keyword.</param>
         /// <param name="defaultCategory">The default category.</param>
         /// <returns>Category.</returns>
-        public static Category GetCategoryByKeyword(string keyword, Category defaultCategory)
+        public Category GetCategoryByKeyword(string keyword, Category defaultCategory)
         {
-            foreach (string kw in CategoryLookupDictionary.Keys.Where(kw => keyword.ToLower().Contains(kw)))
+            foreach (string kw in _categoryLookupDictionary.Keys.Where(kw => keyword.ToLower().Contains(kw)))
             {
-                return new Category((CategoryType)Enum.Parse(typeof(CategoryType), CategoryLookupDictionary[kw]));
+                return new Category((CategoryType)Enum.Parse(typeof(CategoryType), _categoryLookupDictionary[kw]));
             }
 
             return defaultCategory;
@@ -75,20 +67,30 @@ namespace AlvinAshcraft.LinkBuilder.Helpers
         /// <param name="authorName">The current author name.</param>
         /// <param name="findExactMatch">Indicates if an 'exact' or 'contains' search should be performed.</param>
         /// <returns>An author result for the lookup.</returns>
-        public static AuthorResult GetAuthorInfoByName(string authorName, bool findExactMatch)
+        public AuthorResult GetAuthorInfoByName(string authorName, bool findExactMatch)
         {
+            string result;
+
             if (findExactMatch)
             {
-                foreach (string kw in AuthorExactLookupDictionary.Keys.Where(kw => authorName.ToLower().Equals(kw)))
+                result = _authorExactLookupDictionary.Keys.FirstOrDefault(authorName.Equals);
+
+                if (!string.IsNullOrWhiteSpace(result))
                 {
-                    return new AuthorResult(AuthorExactLookupDictionary[kw].Item1, new Category((CategoryType)Enum.Parse(typeof(CategoryType), AuthorExactLookupDictionary[kw].Item2)));
+                    return new AuthorResult(_authorExactLookupDictionary[result].Item1,
+                        new Category((CategoryType) Enum.Parse(typeof(CategoryType),
+                            _authorExactLookupDictionary[result].Item2)));
                 }
             }
             else
             {
-                foreach (string kw in AuthorContainsLookupDictionary.Keys.Where(kw => authorName.ToLower().Contains(kw)))
+                result = _authorContainsLookupDictionary.Keys.FirstOrDefault(authorName.Contains);
+
+                if (!string.IsNullOrWhiteSpace(result))
                 {
-                    return new AuthorResult(AuthorContainsLookupDictionary[kw].Item1, new Category((CategoryType)Enum.Parse(typeof(CategoryType), AuthorContainsLookupDictionary[kw].Item2)));
+                    return new AuthorResult(_authorContainsLookupDictionary[result].Item1,
+                        new Category((CategoryType) Enum.Parse(typeof(CategoryType),
+                            _authorContainsLookupDictionary[result].Item2)));
                 }
             }
 
@@ -101,11 +103,15 @@ namespace AlvinAshcraft.LinkBuilder.Helpers
         /// <param name="authorName">The current author name.</param>
         /// <param name="url">The url to search.</param>
         /// <returns>An author result for the lookup.</returns>
-        public static AuthorResult GetAuthorInfoByUrl(string authorName, string url)
+        public AuthorResult GetAuthorInfoByUrl(string authorName, string url)
         {
-            foreach (string kw in UrlContainsLookupDictionary.Keys.Where(kw => url.ToLower().Contains(kw)))
+            var result = _urlContainsLookupDictionary.Keys.FirstOrDefault(url.Contains);
+
+            if (!string.IsNullOrWhiteSpace(result))
             {
-                return new AuthorResult(UrlContainsLookupDictionary[kw].Item1, new Category((CategoryType)Enum.Parse(typeof(CategoryType), UrlContainsLookupDictionary[kw].Item2)));
+                return new AuthorResult(_urlContainsLookupDictionary[result].Item1,
+                    new Category((CategoryType) Enum.Parse(typeof(CategoryType),
+                        _urlContainsLookupDictionary[result].Item2)));
             }
 
             return new AuthorResult(authorName, new Category());
@@ -115,7 +121,7 @@ namespace AlvinAshcraft.LinkBuilder.Helpers
         /// Gets the assembly directory.
         /// </summary>
         /// <value>The assembly directory.</value>
-        public static string AssemblyDirectory
+        public string AssemblyDirectory
         {
             get
             {

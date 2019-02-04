@@ -83,4 +83,9 @@
   <def keyword="danrigby" author="Dan Rigby" category="Links"/>
   <def keyword="dmbcllc" author="Dave M. Bush" category="WebDevelopment"/>
   <def keyword="majornelsonblogcast" author="Larry Hyrb" category="Podcasts"/>
+  <def keyword="samestuffdifferentday" author="Michael Eaton" category="Links"/>
+  <def keyword="secure/syntax" author="Wes Bos" category="Podcasts"/>
+  <def keyword="odetocode" author="K. Scott Allen" category="WebDevelopment"/>
+  <def keyword="davepaquette" author="David Paquette" category="WebDevelopment"/>
+  <def keyword="revisionpath" author="Maurice Cherry" category="Podcasts"/>
 </database>

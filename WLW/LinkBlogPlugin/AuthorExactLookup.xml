@@ -36,6 +36,13 @@
   <def keyword="pnpguidance" author="David Hayden" category="Design"/>
   <def keyword="rob_relyea" author="Rob Relyea" category="Xaml"/>
   <def keyword="mbcrump" author="Michael Crump" category="WebDevelopment"/>
+  <dev keyword="spec" author="Jonathan Cutrell" category="Podcasts"/>
+  <dev keyword="software engineering daily" author="Jeff Meyerson" category="Podcasts"/>
+  <dev keyword="xamlbrewer" author="Diederik Krols" category="Xaml"/>
+  <dev keyword="major nelson" author="Larry Hyrb" category="Podcasts"/>
+  <dev keyword="davembush" author="Dave M. Bush" category="WebDevelopment"/>
+  <dev keyword="scott@OdeTocode.com" author="K. Scott Allen" category="WebDevelopment"/>
+  <dev keyword="soundbite.fm" author="James Montemagno" category="Podcasts"/>
   <def keyword="rruggeri" author="Roberto Ruggeri" category="Miscellaneous"/>
   <def keyword="scottgu" author="Scott Guthrie" category="WebDevelopment"/>
   <def keyword="glucose" author="Scott Hanselman" category="DotNet"/>
@@ -78,6 +85,7 @@
   <def keyword="derick.bailey" author="Derick Bailey" category="WebDevelopment"/>
   <def keyword="gduthie" author="G. Andrew Duthie" category="Community"/>
   <def keyword="devhammer" author="G. Andrew Duthie" category="Community"/>
+  <def keyword="mike gunderloy" author="Mike Gunderloy" category="Links"/>
   <def keyword="jesseliberty" author="Jesse Liberty" category="Xaml"/>
   <def keyword="danielfe" author="Dan Fernandez" category="Miscellaneous"/>
   <def keyword="frankarr" author="Frank Arrigo" category="Miscellaneous"/>
@@ -89,7 +97,6 @@
   <def keyword="peli de halleux" author="Jonathan de Halleux" category="Design"/>
   <def keyword="angelab" author="Angela Dugan" category="DotNet"/>
   <def keyword="sptblog" author="SharePoint Team" category="SharePoint"/>
-  <def keyword="keyvan@nayyeri.net" author="Keyvan Nayyeri" category="WebDevelopment"/>
   <def keyword="keyvan" author="Keyvan Nayyeri" category="WebDevelopment"/>
   <def keyword="james.kovacs" author="James Kovacs" category="Design"/>
   <def keyword="mbratton" author="Marcus Bratton" category="Miscellaneous"/>
@@ -109,12 +116,7 @@
   <def keyword="bhitney" author="Brian Hitney" category="Miscellaneous"/>
   <def keyword="vbandi" author="András Velvárt" category="Xaml"/>
   <def keyword="chris alcock" author="Chris Alcock" category="Links"/>
-  <def keyword="mike gunderloy" author="Mike Gunderloy" category="Links"/>
   <def keyword="robert diana" author="Robert Diana" category="Links"/>
-  <dev keyword="soundbite.fm" author="James Montemagno" category="Podcasts"/>
-  <dev keyword="spec" author="Jonathan Cutrell" category="Podcasts"/>
-  <dev keyword="software engineering daily" author="Jeff Meyerson" category="Podcasts"/>
-  <dev keyword="xamlbrewer" author="Diederik Krols" category="Xaml"/>
-  <dev keyword="major nelson" author="Larry Hyrb" category="Podcasts"/>
-  <dev keyword="davembush" author="Dave M. Bush" category="WebDevelopment"/>
+  <def keyword="keyvan@nayyeri.net" author="Keyvan Nayyeri" category="WebDevelopment"/>
+  <def keyword="jeremydmiller" author="Jeremy D. Miller" category="WebDevelopment"/>
 </database>
