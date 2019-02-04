@@ -12,9 +12,9 @@ namespace AlvinAshcraft.LinkBuilder
         /// <summary>
         /// The path to WLW blog posts that have been published.
         /// </summary>
-        private const string BlogPath = @"C:\Users\aashcraft.ECLIPSYS\Documents\My Weblog Posts\Recent Posts";
+        private const string BlogPath = @"C:\Users\aashcraft\Documents\My Weblog Posts\Recent Posts";
 
-        private IProperties m_properties;
+        private readonly IProperties _properties;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PluginSettings"/> class.
@@ -22,7 +22,7 @@ namespace AlvinAshcraft.LinkBuilder
         /// <param name="properties">The properties.</param>
         public PluginSettings(IProperties properties)
         {
-            m_properties = properties;
+            _properties = properties;
         }
 
         /// <summary>
@@ -31,14 +31,8 @@ namespace AlvinAshcraft.LinkBuilder
         /// <value>The feed type option.</value>
         public string FeedTypeOption
         {
-            get
-            {
-                return m_properties.GetString("FeedType", "Atom 1.0");
-            }
-            set
-            {
-                m_properties.SetString("FeedType", value);
-            }
+            get => _properties.GetString("FeedType", "Atom 1.0");
+            set => _properties.SetString("FeedType", value);
         }
 
         /// <summary>
@@ -47,14 +41,8 @@ namespace AlvinAshcraft.LinkBuilder
         /// <value>The feed URL option.</value>
         public string FeedUrlOption
         {
-            get
-            {
-                return m_properties.GetString("FeedUrl", Url);
-            }
-            set
-            {
-                m_properties.SetString("FeedUrl", value);
-            }
+            get => _properties.GetString("FeedUrl", Url);
+            set => _properties.SetString("FeedUrl", value);
         }
 
         /// <summary>
@@ -63,14 +51,8 @@ namespace AlvinAshcraft.LinkBuilder
         /// <value>The post path option.</value>
         public string PostPathOption
         {
-            get
-            {
-                return m_properties.GetString("PostPath", BlogPath);
-            }
-            set
-            {
-                m_properties.SetString("PostPath", value);
-            }
+            get => _properties.GetString("PostPath", BlogPath);
+            set => _properties.SetString("PostPath", value);
         }
 
         /// <summary>
@@ -79,14 +61,8 @@ namespace AlvinAshcraft.LinkBuilder
         /// <value>The post prefix option.</value>
         public string PostPrefixOption
         {
-            get
-            {
-                return m_properties.GetString("PostPrefix", "Dew Drop");
-            }
-            set
-            {
-                m_properties.SetString("PostPrefix", value);
-            }
+            get => _properties.GetString("PostPrefix", "Dew Drop");
+            set => _properties.SetString("PostPrefix", value);
         }
 
         /// <summary>
@@ -95,14 +71,8 @@ namespace AlvinAshcraft.LinkBuilder
         /// <value>The max posts option.</value>
         public int MaxPostsOption
         {
-            get
-            {
-                return m_properties.GetInt("MaxPosts", 50);
-            }
-            set
-            {
-                m_properties.SetInt("MaxPosts", value);
-            }
+            get => _properties.GetInt("MaxPosts", 50);
+            set => _properties.SetInt("MaxPosts", value);
         }
 
         /// <summary>
@@ -111,14 +81,8 @@ namespace AlvinAshcraft.LinkBuilder
         /// <value>The buffer option.</value>
         public int BufferOption
         {
-            get
-            {
-                return m_properties.GetInt("Buffer", 12);
-            }
-            set
-            {
-                m_properties.SetInt("Buffer", value);
-            }
+            get => _properties.GetInt("Buffer", 12);
+            set => _properties.SetInt("Buffer", value);
         }
     }
 }

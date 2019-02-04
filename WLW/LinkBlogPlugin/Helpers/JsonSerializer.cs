@@ -46,7 +46,6 @@ namespace RestSharp.Serializers
             };
         }
 
-
         /// <summary>
         /// Default serializer with overload for allowing custom Json.NET settings
         /// </summary>
@@ -55,7 +54,6 @@ namespace RestSharp.Serializers
             ContentType = "application/json";
             _serializer = serializer;
         }
-
 
         /// <summary>
         /// Serialize the object as JSON
@@ -71,29 +69,13 @@ namespace RestSharp.Serializers
                     jsonTextWriter.Formatting = Formatting.Indented;
                     jsonTextWriter.QuoteChar = '"';
 
-
                     _serializer.Serialize(jsonTextWriter, obj);
 
-
-                    var result = stringWriter.ToString();
-                    return result;
+                    return stringWriter.ToString();
                 }
             }
         }
 
-
-        /// <summary>
-        /// Unused for JSON Serialization
-        /// </summary>
-        public string DateFormat { get; set; }
-        /// <summary>
-        /// Unused for JSON Serialization
-        /// </summary>
-        public string RootElement { get; set; }
-        /// <summary>
-        /// Unused for JSON Serialization
-        /// </summary>
-        public string Namespace { get; set; }
         /// <summary>
         /// Content type for serialized content
         /// </summary>

@@ -1,4 +1,6 @@
-﻿namespace AlvinAshcraft.LinkBuilder.Helpers
+﻿using AlvinAshcraft.LinkBuilder.Model;
+
+namespace AlvinAshcraft.LinkBuilder.Helpers
 {
     using System;
     using System.Collections.Generic;
@@ -9,35 +11,44 @@
 
     public static class LookupHelper
     {
-        private static readonly Dictionary<string, string> categoryLookupDictionary;
+        private static readonly IDictionary<string, string> CategoryLookupDictionary;
 
-        private static readonly Dictionary<string, Tuple<string, string>> authorExactLookupDictionary;
+        private static readonly IDictionary<string, Tuple<string, string>> AuthorExactLookupDictionary;
 
-        private static readonly Dictionary<string, Tuple<string, string>> authorContainsLookupDictionary;
+        private static readonly IDictionary<string, Tuple<string, string>> AuthorContainsLookupDictionary;
+
+        private static readonly IDictionary<string, Tuple<string, string>> UrlContainsLookupDictionary;
 
         /// <summary>
         /// Initializes static members of the <see cref="LookupHelper"/> class.
         /// </summary>
         static LookupHelper()
         {
-            string file = File.ReadAllText(String.Format("{0}\\CategoryLookup.xml", AssemblyDirectory));
+            string file = File.ReadAllText($"{AssemblyDirectory}\\CategoryLookup.xml");
 
-            categoryLookupDictionary =
+            CategoryLookupDictionary =
                 XElement.Parse(file)
                     .Elements("def")
                     .ToDictionary(el => (string)el.Attribute("keyword"), el => (string)el.Attribute("category"));
 
-            string fileContains = File.ReadAllText(String.Format("{0}\\AuthorContainsLookup.xml", AssemblyDirectory));
+            string fileContains = File.ReadAllText($"{AssemblyDirectory}\\AuthorContainsLookup.xml");
 
-            authorContainsLookupDictionary =
+            AuthorContainsLookupDictionary =
                 XElement.Parse(fileContains)
                     .Elements("def")
                     .ToDictionary(el => (string)el.Attribute("keyword"), el => new Tuple<string, string>((string)el.Attribute("author"), (string)el.Attribute("category")));
 
-            string fileExact = File.ReadAllText(String.Format("{0}\\AuthorExactLookup.xml", AssemblyDirectory));
+            string fileExact = File.ReadAllText($"{AssemblyDirectory}\\AuthorExactLookup.xml");
 
-            authorExactLookupDictionary =
+            AuthorExactLookupDictionary =
                 XElement.Parse(fileExact)
+                    .Elements("def")
+                    .ToDictionary(el => (string)el.Attribute("keyword"), el => new Tuple<string, string>((string)el.Attribute("author"), (string)el.Attribute("category")));
+
+            string fileUrl = File.ReadAllText($"{AssemblyDirectory}\\UrlContainsLookup.xml");
+
+            UrlContainsLookupDictionary =
+                XElement.Parse(fileUrl)
                     .Elements("def")
                     .ToDictionary(el => (string)el.Attribute("keyword"), el => new Tuple<string, string>((string)el.Attribute("author"), (string)el.Attribute("category")));
         }
@@ -50,29 +61,51 @@
         /// <returns>Category.</returns>
         public static Category GetCategoryByKeyword(string keyword, Category defaultCategory)
         {
-            foreach (string kw in categoryLookupDictionary.Keys.Where(kw => keyword.ToLower().Contains(kw)))
+            foreach (string kw in CategoryLookupDictionary.Keys.Where(kw => keyword.ToLower().Contains(kw)))
             {
-                return new Category((CategoryType)Enum.Parse(typeof(CategoryType), categoryLookupDictionary[kw]));
+                return new Category((CategoryType)Enum.Parse(typeof(CategoryType), CategoryLookupDictionary[kw]));
             }
 
             return defaultCategory;
         }
 
+        /// <summary>
+        /// Finds and author result for a given author name.
+        /// </summary>
+        /// <param name="authorName">The current author name.</param>
+        /// <param name="findExactMatch">Indicates if an 'exact' or 'contains' search should be performed.</param>
+        /// <returns>An author result for the lookup.</returns>
         public static AuthorResult GetAuthorInfoByName(string authorName, bool findExactMatch)
         {
             if (findExactMatch)
             {
-                foreach (string kw in authorExactLookupDictionary.Keys.Where(kw => authorName.ToLower().Equals(kw)))
+                foreach (string kw in AuthorExactLookupDictionary.Keys.Where(kw => authorName.ToLower().Equals(kw)))
                 {
-                    return new AuthorResult(authorExactLookupDictionary[kw].First, new Category((CategoryType)Enum.Parse(typeof(CategoryType), authorExactLookupDictionary[kw].Second)));
+                    return new AuthorResult(AuthorExactLookupDictionary[kw].Item1, new Category((CategoryType)Enum.Parse(typeof(CategoryType), AuthorExactLookupDictionary[kw].Item2)));
                 }
             }
             else
             {
-                foreach (string kw in authorContainsLookupDictionary.Keys.Where(kw => authorName.ToLower().Contains(kw)))
+                foreach (string kw in AuthorContainsLookupDictionary.Keys.Where(kw => authorName.ToLower().Contains(kw)))
                 {
-                    return new AuthorResult(authorContainsLookupDictionary[kw].First, new Category((CategoryType)Enum.Parse(typeof(CategoryType), authorContainsLookupDictionary[kw].Second)));
+                    return new AuthorResult(AuthorContainsLookupDictionary[kw].Item1, new Category((CategoryType)Enum.Parse(typeof(CategoryType), AuthorContainsLookupDictionary[kw].Item2)));
                 }
+            }
+
+            return new AuthorResult(authorName, new Category());
+        }
+
+        /// <summary>
+        /// Finds an author result for a given Url.
+        /// </summary>
+        /// <param name="authorName">The current author name.</param>
+        /// <param name="url">The url to search.</param>
+        /// <returns>An author result for the lookup.</returns>
+        public static AuthorResult GetAuthorInfoByUrl(string authorName, string url)
+        {
+            foreach (string kw in UrlContainsLookupDictionary.Keys.Where(kw => url.ToLower().Contains(kw)))
+            {
+                return new AuthorResult(UrlContainsLookupDictionary[kw].Item1, new Category((CategoryType)Enum.Parse(typeof(CategoryType), UrlContainsLookupDictionary[kw].Item2)));
             }
 
             return new AuthorResult(authorName, new Category());

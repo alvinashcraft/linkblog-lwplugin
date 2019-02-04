@@ -1,4 +1,4 @@
-﻿namespace AlvinAshcraft.LinkBuilder
+﻿namespace AlvinAshcraft.LinkBuilder.Model
 {
     public class Category
     {
@@ -27,38 +27,38 @@
         /// Gets or sets the name.
         /// </summary>
         /// <value>The name.</value>
-        public string Name { get; private set; }
+        public string Name { get; }
 
         /// <summary>
         /// Gets or sets the caption.
         /// </summary>
         /// <value>The caption.</value>
-        public string Caption { get; private set; }
+        public string Caption { get; }
 
-        public CategoryType CatType { get; private set; }
+        public CategoryType CatType { get; }
 
         private string GetCategoryCaptionForType(CategoryType categoryType)
         {
             switch (categoryType)
             {
                 case CategoryType.DotNet:
-                    return "Miscellaneous .NET";
+                    return "Visual Studio & .NET";
                 case CategoryType.WebDevelopment:
-                    return "Web Development";
+                    return "Web & Cloud Development";
                 case CategoryType.Design:
-                    return "Design / Methodology / Testing";
+                    return "Design, Methodology & Testing";
                 case CategoryType.Xaml:
-                    return "XAML";
+                    return "XAML, UWP & Xamarin";
                 case CategoryType.Mobile:
-                    return "Other Mobile Platforms";
+                    return "Mobile, IoT & Game Development";
                 case CategoryType.Podcasts:
-                    return "Podcasts / Screencasts / Videos";
+                    return "Podcasts, Screencasts & Videos";
                 case CategoryType.Community:
-                    return "Community / Events";
+                    return "Community & Events";
                 case CategoryType.Sql:
                     return "Database";
                 case CategoryType.SharePoint:
-                    return "SharePoint";
+                    return "SharePoint & MS Teams";
                 case CategoryType.PowerShell:
                     return "PowerShell";
                 case CategoryType.Miscellaneous:

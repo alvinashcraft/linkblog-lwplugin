@@ -111,4 +111,10 @@
   <def keyword="chris alcock" author="Chris Alcock" category="Links"/>
   <def keyword="mike gunderloy" author="Mike Gunderloy" category="Links"/>
   <def keyword="robert diana" author="Robert Diana" category="Links"/>
+  <dev keyword="soundbite.fm" author="James Montemagno" category="Podcasts"/>
+  <dev keyword="spec" author="Jonathan Cutrell" category="Podcasts"/>
+  <dev keyword="software engineering daily" author="Jeff Meyerson" category="Podcasts"/>
+  <dev keyword="xamlbrewer" author="Diederik Krols" category="Xaml"/>
+  <dev keyword="major nelson" author="Larry Hyrb" category="Podcasts"/>
+  <dev keyword="davembush" author="Dave M. Bush" category="WebDevelopment"/>
 </database>

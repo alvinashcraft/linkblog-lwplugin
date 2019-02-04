@@ -1,4 +1,4 @@
-﻿namespace AlvinAshcraft.LinkBuilder
+﻿namespace AlvinAshcraft.LinkBuilder.Model
 {
     public enum CategoryType
     {

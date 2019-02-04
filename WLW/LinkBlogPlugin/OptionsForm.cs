@@ -1,12 +1,4 @@
-﻿//--------------------------------------------------------------------------------------------------------------------- 
-// <copyright file="OptionsForm.cs" company="Alvinitech">
-//   Copyright by Alvin Ashcraft 2013 - Alvinitech.
-// </copyright>
-// <summary>
-//   Defines the OptionsForm type.
-// </summary>
-//---------------------------------------------------------------------------------------------------------------------
-namespace AlvinAshcraft.LinkBuilder
+﻿namespace AlvinAshcraft.LinkBuilder
 {
     using System;
     using System.IO;
@@ -20,7 +12,7 @@ namespace AlvinAshcraft.LinkBuilder
         /// <summary>
         /// Object to hold the plugin options.
         /// </summary>
-        private readonly PluginSettings options;
+        private readonly PluginSettings _options;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="OptionsForm"/> class.
@@ -28,7 +20,7 @@ namespace AlvinAshcraft.LinkBuilder
         /// <param name="options">The options.</param>
         public OptionsForm(PluginSettings options)
         {
-            this.options = options;
+            _options = options;
             InitializeComponent();
             AtomFeedTextBox.Text = options.FeedUrlOption;
             PostPathTextBox.Text = options.PostPathOption;
@@ -75,12 +67,12 @@ namespace AlvinAshcraft.LinkBuilder
         /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            this.options.FeedUrlOption = AtomFeedTextBox.Text;
-            this.options.PostPathOption = PostPathTextBox.Text;
-            this.options.FeedTypeOption = FeedTypeComboBox.Text;
-            this.options.PostPrefixOption = PostPrefixTextBox.Text;
-            this.options.MaxPostsOption = Convert.ToInt32(MaxPostsNumericUpDown.Value);
-            this.options.BufferOption = Convert.ToInt32(BufferNumericUpDown.Value);
+            _options.FeedUrlOption = AtomFeedTextBox.Text;
+            _options.PostPathOption = PostPathTextBox.Text;
+            _options.FeedTypeOption = FeedTypeComboBox.Text;
+            _options.PostPrefixOption = PostPrefixTextBox.Text;
+            _options.MaxPostsOption = Convert.ToInt32(MaxPostsNumericUpDown.Value);
+            _options.BufferOption = Convert.ToInt32(BufferNumericUpDown.Value);
 
             Close();
         }

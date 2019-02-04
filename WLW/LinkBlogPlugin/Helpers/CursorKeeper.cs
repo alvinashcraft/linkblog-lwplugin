@@ -1,8 +1,8 @@
-namespace AlvinAshcraft.LinkBuilder
-{
-    using System;
-    using System.Windows.Forms;
+using System;
+using System.Windows.Forms;
 
+namespace AlvinAshcraft.LinkBuilder.Helpers
+{
     public class CursorKeeper : IDisposable
     {
         private readonly Cursor _originalCursor;

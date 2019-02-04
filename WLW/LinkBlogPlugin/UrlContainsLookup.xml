@@ -1,3 +1,86 @@
 ﻿<database>
-  <def keyword="sharepoint" category="SharePoint"/>
+  <def keyword="bhandler" author="Blake Handler" category="Miscellaneous"/>
+  <def keyword="dougholland" author="Doug Holland" category="Miscellaneous"/>
+  <def keyword="bennadel" author="Ben Nadel" category="WebDevelopment"/>
+  <def keyword="paulhammant" author="Paul Hammant" category="WebDevelopment"/>
+  <def keyword="bleroy" author="Bertrand Le Roy" category="WebDevelopment"/>
+  <def keyword="mike-ward" author="Mike Ward" category="Miscellaneous"/>
+  <def keyword="msdevshow" author="Jason Young &amp; Carl Schweitzer" category="Podcasts"/>
+  <def keyword="mikeormond" author="Mike Ormond" category="Miscellaneous"/>
+  <def keyword="agilescout" author="Peter Saddington" category="Design"/>
+  <def keyword="codinghorror" author="Jeff Atwood" category="Miscellaneous"/>
+  <def keyword="devhammer" author="G. Andrew Duthie" category="Community"/>
+  <def keyword="codingthearchitecture" author="Simon Brown" category="Design"/>
+  <def keyword="www.wduffy.co.uk" author="William Duffy" category="Miscellaneous"/>
+  <def keyword="pixel8" author="Craig Shoemaker" category="Podcasts"/>
+  <def keyword="geekswithblogs.net/ranganh" author="Harish Ranganathan" category="Miscellaneous"/>
+  <def keyword="maartenballiauw" author="Maarten Balliauw" category="WebDevelopment"/>
+  <def keyword="love2dev" author="Chris Love" category="WebDevelopment"/>
+  <def keyword="electricbeach" author="Christian Schormann" category="Xaml"/>
+  <def keyword="4guysfrom" author="Scott Mitchell" category="WebDevelopment"/>
+  <def keyword="highoncoding.com" author="Mohammad Azam" category="Miscellaneous"/>
+  <def keyword="charliedigital" author="Charles Chen" category="Miscellaneous"/>
+  <def keyword="jamesshore" author="James Shore" category="Design"/>
+  <def keyword="nikhilk" author="Nikhil Kothari" category="Xaml"/>
+  <def keyword="windowsphonegeek" author="Windows Phone Geek" category="Xaml"/>
+  <def keyword="deepfriedbytes" author="Keith Elder &amp; Chris Woodruff" category="Podcasts"/>
+  <def keyword="wekeroad" author="Rob Conery" category="WebDevelopment"/>
+  <def keyword="peterkellnernet" author="Peter Kellner" category="Miscellaneous"/>
+  <def keyword="ayende" author="Oren Eini" category="DotNet"/>
+  <def keyword="reedcopsey" author="Reed Copsey" category="DotNet"/>
+  <def keyword="roryprimrose" author="Rory Primrose" category="DotNet"/>
+  <def keyword="microsoft.com/events/podcasts" author="MS Podcasts" category="Podcasts"/>
+  <def keyword="sqlskills.com" author="Paul S. Randal" category="Sql"/>
+  <def keyword="dotnetkicks" author="DotNetKicks" category="Miscellaneous"/>
+  <def keyword="microsoftdownload" author="MS Downloads" category="Miscellaneous"/>
+  <def keyword="msdownloads" author="MS Downloads" category="Miscellaneous"/>
+  <def keyword="downloads.microsoft" author="MS Downloads" category="Miscellaneous"/>
+  <def keyword="microsoft.com/downloads" author="MS Downloads" category="Miscellaneous"/>
+  <def keyword="lazycoder" author="Scott Koon" category="Miscellaneous"/>
+  <def keyword="kirupa" author="Kirupa Chinnathambi" category="WebDevelopment"/>
+  <def keyword="grantpalin" author="Grant Palin" category="Links"/>
+  <def keyword="webbtechsolutions" author="Joe Webb" category="Sql"/>
+  <def keyword="thedatafarm" author="Julie Lerman" category="DotNet"/>
+  <def keyword="firstfloorsoftware" author="Koen Zwikstra" category="Xaml"/>
+  <def keyword="mistergoodcat" author="Peter Kuhn" category="Xaml"/>
+  <def keyword="rudigrobler" author="Rudi Grobler" category="Xaml"/>
+  <def keyword="dotnet.org.za/rudi" author="Rudi Grobler" category="Xaml"/>
+  <def keyword="japf.fr" author="Jeremy Alles" category="Xaml"/>
+  <def keyword="stevegilham" author="Steve Gilham" category="Miscellaneous"/>
+  <def keyword="jasonbock" author="Jason Bock" category="DotNet"/>
+  <def keyword="hanselminutes" author="Scott Hanselman" category="Podcasts"/>
+  <def keyword="programmingtour" author="Corey Haines" category="Design"/>
+  <def keyword="paul-zubkov" author="Paul Zubkov" category="Miscellaneous"/>
+  <def keyword="thekua" author="Patrick Kua" category="Design"/>
+  <def keyword="kevingriffin" author="Kevin Griffin" category="Miscellaneous"/>
+  <def keyword="robmiles" author="Rob Miles" category="Miscellaneous"/>
+  <def keyword="ariankulp" author="Arian Kulp" category="Miscellaneous"/>
+  <def keyword="gweek.libsyn" author="Mark Frauenfelder" category="Podcasts"/>
+  <def keyword="windowsphonedevpodcast" author="Ryan Lowdermilk &amp; Travis Lowdermilk" category="Podcasts"/>
+  <def keyword="netcave.org" author="Alan Stevens" category="Miscellaneous"/>
+  <def keyword="codingqa" author="Mark Berryman &amp; Jim Wang" category="Podcasts"/>
+  <def keyword="wpf.2000things" author="Sean Sexton" category="Xaml"/>
+  <def keyword="developingfor.net" author="Joel Cochran" category="WebDevelopment"/>
+  <def keyword="martinfowler.com" author="Martin Fowler" category="Design"/>
+  <def keyword="kirkk.com" author="Kirk Knoernschild" category="Design"/>
+  <def keyword="dotnetrocks" author="Carl Franklin &amp; Richard Campbell" category="Podcasts"/>
+  <def keyword="nerdyhearn" author="Tom Hearn" category="WebDevelopment"/>
+  <def keyword="jsmag" author="Michael Kimsal" category="WebDevelopment"/>
+  <def keyword="whereslou" author="Louis DeJardin" category="WebDevelopment"/>
+  <def keyword="platinumbay" author="Steve Andrews" category="DotNet"/>
+  <def keyword="rtipton.wordpress" author="Rhonda Tipton" category="Links"/>
+  <def keyword="coderant" author="Mike Hadlow" category="WebDevelopment"/>
+  <def keyword="herdingcode" author="Jon Galloway, K. Scott Allen, Scott Koon &amp; Kevin Dente" category="Podcasts"/>
+  <def keyword="coolthingoftheday" author="Greg Duncan" category="Miscellaneous"/>
+  <def keyword="charlespetzold" author="Charles Petzold" category="Xaml"/>
+  <def keyword="blackwasp" author="Richard Carr" category="Xaml"/>
+  <def keyword="trelford" author="Phillip Trelford" category="Miscellaneous"/>
+  <def keyword="rthand.com" author="Miha Markic" category="DotNet"/>
+  <def keyword="openmymind.net" author="Karl Seguin" category="WebDevelopment"/>
+  <def keyword="andrewconnell" author="Andrew Connell" category="SharePoint"/>
+  <def keyword="windowsappdev.com" author="Dan Rigby" category="Links"/>
+  <def keyword="allaboutxamarin.com" author="Dan Rigby" category="Links"/>
+  <def keyword="danrigby" author="Dan Rigby" category="Links"/>
+  <def keyword="dmbcllc" author="Dave M. Bush" category="WebDevelopment"/>
+  <def keyword="majornelsonblogcast" author="Larry Hyrb" category="Podcasts"/>
 </database>
