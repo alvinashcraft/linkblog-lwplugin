@@ -1,6 +1,6 @@
 ﻿<database>
   <def keyword="sam gentile" author="Sam Gentile" category="Links"/>
-  <def keyword="ayende" author="Oren Eini" category="DotNet"/>
+  <def keyword="ayende" author="Oren Eini" category="Sql"/>
   <def keyword="ray vernagus" author="Ray Vernagus" category="Miscellaneous"/>
   <def keyword="camerons" author="Cameron Skinner" category="DotNet"/>
   <def keyword="clemensreijnen" author="Clemens Reijnen" category="DotNet"/>
