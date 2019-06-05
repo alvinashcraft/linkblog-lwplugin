@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-namespace AlvinAshcraft.LinkBuilder.Contracts
+﻿namespace AlvinAshcraft.LinkBuilder.Contracts
 {
     public class Rootobject
     {

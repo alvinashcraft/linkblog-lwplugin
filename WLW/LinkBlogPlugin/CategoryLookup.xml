@@ -65,6 +65,7 @@
     <def keyword="iphone" category="Mobile"/>
     <def keyword="ipad" category="Mobile"/>
     <def keyword="visual studio" category="DotNet"/>
+    <def keyword="visual basic" category="DotNet"/>
     <def keyword="c#" category="DotNet"/>
     <def keyword="vb" category="DotNet"/>
     <def keyword="f#" category="DotNet"/>
@@ -87,4 +88,5 @@
     <def keyword="ionic" category="Mobile"/>
     <def keyword="alexa" category="Mobile"/>
     <def keyword="react" category="WebDevelopment"/>
+    <def keyword="rxjs" category="WebDevelopment"/>
 </database>

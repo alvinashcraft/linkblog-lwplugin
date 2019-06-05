@@ -6,7 +6,8 @@
 //   Defines the BlogEntry type.
 // </summary>
 //---------------------------------------------------------------------------------------------------------------------
-namespace AlvinAshcraft.LinkBuilder
+
+namespace AlvinAshcraft.LinkBuilder.Model
 {
     /// <summary>
     /// Defines the BlogEntry type.

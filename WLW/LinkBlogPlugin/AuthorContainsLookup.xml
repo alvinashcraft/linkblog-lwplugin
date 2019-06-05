@@ -17,10 +17,11 @@
   <def keyword="beth massi" author="Beth Massi" category="WebDevelopment"/>
   <def keyword="the evil empire" author="Bertrand Le Roy" category="WebDevelopment"/>
   <def keyword="kltripp" author="Kimberly Tripp" category="Sql"/>
-  <def keyword="powerscripting" author="Jonathan Walz + Hal Rottenberg" category="Podcasts"/>
-  <def keyword="sharepoint pod show" author="Rob Foster, Nick Swan + Brett Lonsdale" category="Podcasts"/>
+  <def keyword="powerscripting" author="Jonathan Walz &amp; Hal Rottenberg" category="Podcasts"/>
+  <def keyword="sharepoint pod show" author="Rob Foster, Nick Swan &amp; Brett Lonsdale" category="Podcasts"/>
   <def keyword="michael kimsal" author="Michael Kimsal" category="WebDevelopment"/>
   <def keyword="marc grabanski" author="Marc Grabanski" category="Miscellaneous"/>
   <def keyword="david giard" author="David Giard" category="Podcasts"/>
   <def keyword="julian m bucknall" author="Julian M. Bucknall" category="WebDevelopment"/>
+  <def keyword="mtechviral" author="MTechViral" category="Podcasts"/>
 </database>
