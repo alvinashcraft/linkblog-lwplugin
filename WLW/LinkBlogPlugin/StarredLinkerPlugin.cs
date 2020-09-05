@@ -185,16 +185,22 @@ namespace AlvinAshcraft.LinkBuilder
         /// <returns>System.String.</returns>
         private static string AppendMvpIdToUrl(string url)
         {
-            if (url.Contains("WT.mc_id=rss_alldownloads_all"))
-                url = url.Replace("WT.mc_id=rss_alldownloads_all", "WT.mc_id=DX_MVP4025064");
-
-            if ((url.Contains("blogs.msdn.com") || url.Contains("channel9.msdn.com") 
-                || url.Contains("blogs.windows.com") || url.Contains("weblogs.asp.net")) 
+            if ((url.Contains("blogs.msdn.com") || url.Contains("channel9.msdn.com") ||
+                url.Contains("devblogs.microsoft.com") || url.Contains("docs.microsoft.com") ||
+                url.Contains("social.technet.microsoft.com") || url.Contains("azure.microsoft.com") ||
+                url.Contains("techcommunity.microsoft.com") || url.Contains("social.msdn.microsoft.com") ||
+                url.Contains("developer.microsoft.com") || url.Contains("cloudblogs.microsoft.com") ||
+                url.Contains("microsoft.com/handsonlabs") || url.Contains("weblogs.asp.net")) 
                 && !url.Contains("?"))
             {
-                url = url + "?WT.mc_id=DX_MVP4025064";
+                url = url + "?WT.mc_id=DOP-MVP-4025064";
             }
 
+            if (url.Contains("blogs.windows.com") && !url.Contains("?"))
+            {
+                url = url + "?WT.mc_id=WD-MVP-4025064";
+            }
+            
             return url;
         }
 
@@ -207,7 +213,7 @@ namespace AlvinAshcraft.LinkBuilder
             const string newsBlurBaseUrl = "http://www.newsblur.com";
             var client = new RestClient(newsBlurBaseUrl);
             string restResource = _options.FeedUrlOption.Replace($"{newsBlurBaseUrl}/", string.Empty);
-            client.Authenticator = new HttpBasicAuthenticator("alvinashcraft", "Po02zxn#");
+            client.Authenticator = new HttpBasicAuthenticator("alvinashcraft", "capall#") // broke so pwd gets added locally
             var request = new RestRequest($"{restResource}?limit={_options.MaxPostsOption}", Method.GET);
 
             IRestResponse response = client.Execute(request);
