@@ -105,4 +105,8 @@
     <def keyword="swift" category="Mobile"/>
     <def keyword="octopus" category="Design"/>
     <def keyword="msix" category="Design"/>
+    <def keyword="dotnet" category="DotNet"/>
+    <def keyword="efcore" category="DotNet"/>
+    <def keyword="ef core" category="DotNet"/>
+    <def keyword="entity framework" category="DotNet"/>
 </database>

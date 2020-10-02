@@ -112,4 +112,6 @@
   <def keyword="The-Dev-Talk-Show" author="Andy Schwam, Chris Gomez + Rich Ross" category="Community"/>
   <dev keyword="p0w3rsh3ll" author="Emin Atac" category="PowerShell"/>
   <def keyword="gatesnotes" author="Bill Gates" category="Miscellaneous"/>
+  <dev keyword="poppastring" author="Mark Downie" category="DotNet"/>
+  <def keyword="dotnetcore.show" author="Jamie Taylor" category="Podcasts"/>
 </database>
