@@ -98,4 +98,18 @@
   <def keyword="thepolyglotdeveloper" author="Nic Raboy" category="WebDevelopment"/>
   <def keyword="leastprivilege" author="Dominick Baier" category="WebDevelopment"/>
   <def keyword="solrevdev" author="John Smith" category="WebDevelopment"/>
+  <def keyword="carlrippon" author="Carl Rippon" category="WebDevelopment"/>
+  <dev keyword="westdiscgolf" author="Adam Storr" category="WebDevelopment"/>
+  <dev keyword="khalidabuhakmeh" author="Khalid Abuhakmeh" category="WebDevelopment"/>
+  <dev keyword="jonhilton" author="Jon Hilton" category="WebDevelopment"/>
+  <dev keyword="nblumhardt" author="Nicholas Blumhardt" category="DotNet"/>
+  <dev keyword="imwright" author="Eric Brechner" category="Design"/>
+  <def keyword="reactpodcast" author="Michael Chan" category="Podcasts"/>
+  <dev keyword="elbruno" author="Bruno Capuano" category="DotNet"/>
+  <dev keyword="aligneddev" author="Kevin Logan" category="DotNet"/>
+  <dev keyword="roundthecode" author="David Grace" category="DotNet"/>
+  <dev keyword="pottereric" author="Eric Potter" category="DotNet"/>
+  <def keyword="The-Dev-Talk-Show" author="Andy Schwam, Chris Gomez + Rich Ross" category="Community"/>
+  <dev keyword="p0w3rsh3ll" author="Emin Atac" category="PowerShell"/>
+  <def keyword="gatesnotes" author="Bill Gates" category="Miscellaneous"/>
 </database>
