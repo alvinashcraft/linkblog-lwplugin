@@ -29,7 +29,9 @@
     <def keyword="knockout" category="WebDevelopment"/>
     <def keyword="durandal" category="WebDevelopment"/>
     <def keyword="sql azure" category="Sql"/>
+    <def keyword="devops" category="Design"/>
     <def keyword="azure" category="WebDevelopment"/>
+    <def keyword="kubernetes" category="WebDevelopment"/>
     <def keyword="php" category="WebDevelopment"/>
     <def keyword="web api" category="WebDevelopment"/>
     <def keyword=".js" category="WebDevelopment"/>
@@ -74,6 +76,8 @@
     <def keyword="vs2013" category="DotNet"/>
     <def keyword="vs2015" category="DotNet"/>
     <def keyword="vs2017" category="DotNet"/>
+    <def keyword="vs2019" category="DotNet"/>
+    <def keyword="vs code" category="DotNet"/>
     <def keyword="wcf" category="DotNet"/>
     <def keyword="nuget" category="DotNet"/>
     <def keyword="linq" category="DotNet"/>
@@ -89,4 +93,16 @@
     <def keyword="alexa" category="Mobile"/>
     <def keyword="react" category="WebDevelopment"/>
     <def keyword="rxjs" category="WebDevelopment"/>
+    <def keyword="svelte" category="WebDevelopment"/>
+    <def keyword="vue" category="WebDevelopment"/>
+    <def keyword="blazor" category="WebDevelopment"/>
+    <def keyword="winui" category="Xaml"/>
+    <def keyword="wts" category="Xaml"/>
+    <def keyword="uno platform" category="Xaml"/>
+    <def keyword="maui" category="Xaml"/>
+    <def keyword="wct" category="Xaml"/>
+    <def keyword="flutter" category="Mobile"/>
+    <def keyword="swift" category="Mobile"/>
+    <def keyword="octopus" category="Design"/>
+    <def keyword="msix" category="Design"/>
 </database>
