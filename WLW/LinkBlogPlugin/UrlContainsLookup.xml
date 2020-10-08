@@ -114,4 +114,11 @@
   <def keyword="gatesnotes" author="Bill Gates" category="Miscellaneous"/>
   <dev keyword="poppastring" author="Mark Downie" category="DotNet"/>
   <def keyword="dotnetcore.show" author="Jamie Taylor" category="Podcasts"/>
+  <def keyword="petabridge" author="Aaron Stannard" category="Miscellaneous"/>
+  <def keyword="kubernetespodcast" author="Craig Box + Adam Glick" category="Podcasts"/>
+  <dev keyword="roundthecode" author="David Grace" category="WebDevelopment"/>
+  <dev keyword="aaron-powell" author="Aaron Powell" category="WebDevelopment"/>
+  <dev keyword="2ality" author="Axel Rauschmayer" category="WebDevelopment"/>
+  <dev keyword="ardalis" author="Steve Smith" category="Design"/>
+  <dev keyword="eslint" author="ESLint Team" category="WebDevelopment"/>
 </database>

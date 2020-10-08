@@ -108,4 +108,6 @@
   <def keyword="keyvan@nayyeri.net" author="Keyvan Nayyeri" category="WebDevelopment"/>
   <def keyword="jeremydmiller" author="Jeremy D. Miller" category="WebDevelopment"/>
   <def keyword="procoder" author="Sanjay Modi" category="WebDevelopment"/>
+  <def keyword="izs" author="Isaac Z. Schlueter" category="WebDevelopment"/>
+  <def keyword="dhindrik" author="Daniel Hindrikes" category="Xaml"/>
 </database>
