@@ -1,5 +1,7 @@
 ﻿<database>
   <def keyword="bhandler" author="Blake Handler" category="Miscellaneous"/>
+  <dev keyword="khalidabuhakmeh" author="Khalid Abuhakmeh" category="WebDevelopment"/>
+  <dev keyword="jonhilton" author="Jon Hilton" category="WebDevelopment"/>
   <def keyword="dougholland" author="Doug Holland" category="Miscellaneous"/>
   <def keyword="bennadel" author="Ben Nadel" category="WebDevelopment"/>
   <def keyword="paulhammant" author="Paul Hammant" category="WebDevelopment"/>
@@ -100,8 +102,6 @@
   <def keyword="solrevdev" author="John Smith" category="WebDevelopment"/>
   <def keyword="carlrippon" author="Carl Rippon" category="WebDevelopment"/>
   <dev keyword="westdiscgolf" author="Adam Storr" category="WebDevelopment"/>
-  <dev keyword="khalidabuhakmeh" author="Khalid Abuhakmeh" category="WebDevelopment"/>
-  <dev keyword="jonhilton" author="Jon Hilton" category="WebDevelopment"/>
   <dev keyword="nblumhardt" author="Nicholas Blumhardt" category="DotNet"/>
   <dev keyword="imwright" author="Eric Brechner" category="Design"/>
   <def keyword="reactpodcast" author="Michael Chan" category="Podcasts"/>
@@ -121,4 +121,8 @@
   <dev keyword="2ality" author="Axel Rauschmayer" category="WebDevelopment"/>
   <dev keyword="ardalis" author="Steve Smith" category="Design"/>
   <dev keyword="eslint" author="ESLint Team" category="WebDevelopment"/>
+  <dev keyword="dontcodetired" author="Jason Roberts" category="WebDevelopment"/>
+  <def keyword="cppcast" author="Rob Irving" category="Podcasts"/>
+  <dev keyword="ericsink" author="Eric Sink" category="DotNet"/>
+  <dev keyword="keithclark" author="Keith Clark" category="WebDevelopment"/>
 </database>
