@@ -91,6 +91,8 @@
     <def keyword="react native" category="Mobile"/>
     <def keyword="ionic" category="Mobile"/>
     <def keyword="alexa" category="Mobile"/>
+	<def keyword="iot" category="Mobile"/>
+	<def keyword="raspberry pi" category="Mobile"/>
     <def keyword="react" category="WebDevelopment"/>
     <def keyword="rxjs" category="WebDevelopment"/>
     <def keyword="svelte" category="WebDevelopment"/>
@@ -104,6 +106,7 @@
     <def keyword="flutter" category="Mobile"/>
     <def keyword="swift" category="Mobile"/>
     <def keyword="octopus" category="Design"/>
+	<def keyword="continuous integration" category="Design"/>
     <def keyword="msix" category="Design"/>
     <def keyword="dotnet" category="DotNet"/>
     <def keyword="efcore" category="DotNet"/>
