@@ -9,7 +9,6 @@
   <def keyword="mike-ward" author="Mike Ward" category="Miscellaneous"/>
   <def keyword="msdevshow" author="Jason Young &amp; Carl Schweitzer" category="Podcasts"/>
   <def keyword="mikeormond" author="Mike Ormond" category="Miscellaneous"/>
-  <def keyword="agilescout" author="Peter Saddington" category="Design"/>
   <def keyword="codinghorror" author="Jeff Atwood" category="Miscellaneous"/>
   <def keyword="devhammer" author="G. Andrew Duthie" category="Community"/>
   <def keyword="codingthearchitecture" author="Simon Brown" category="Design"/>
@@ -125,4 +124,5 @@
   <def keyword="cppcast" author="Rob Irving" category="Podcasts"/>
   <dev keyword="ericsink" author="Eric Sink" category="DotNet"/>
   <dev keyword="keithclark" author="Keith Clark" category="WebDevelopment"/>
+  <dev keyword="kentcdodds" author="Kent C. Dodds" category="WebDevelopment"/>
 </database>

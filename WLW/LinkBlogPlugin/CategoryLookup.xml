@@ -112,4 +112,5 @@
     <def keyword="efcore" category="DotNet"/>
     <def keyword="ef core" category="DotNet"/>
     <def keyword="entity framework" category="DotNet"/>
+	<def keyword="ssms" category="Sql"/>
 </database>
