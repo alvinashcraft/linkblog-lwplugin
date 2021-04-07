@@ -1,5 +1,6 @@
 ﻿<database>
     <def keyword="sharepoint" category="SharePoint"/>
+	<def keyword="teams" category="SharePoint"/>
     <def keyword="powershell" category="PowerShell"/>
     <def keyword="wmi" category="PowerShell"/>
     <def keyword="silverlight" category="Xaml"/>

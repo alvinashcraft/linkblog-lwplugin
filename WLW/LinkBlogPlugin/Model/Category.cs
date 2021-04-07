@@ -48,7 +48,7 @@
                 case CategoryType.Design:
                     return "Design, Methodology & Testing";
                 case CategoryType.Xaml:
-                    return "XAML, UWP & Xamarin";
+                    return "WinUI, .NET MAUI & XAML";
                 case CategoryType.Mobile:
                     return "Mobile, IoT & Game Development";
                 case CategoryType.Podcasts:
