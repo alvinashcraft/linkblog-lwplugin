@@ -213,7 +213,7 @@ namespace AlvinAshcraft.LinkBuilder
             const string newsBlurBaseUrl = "http://www.newsblur.com";
             var client = new RestClient(newsBlurBaseUrl);
             string restResource = _options.FeedUrlOption.Replace($"{newsBlurBaseUrl}/", string.Empty);
-            client.Authenticator = new HttpBasicAuthenticator("alvinashcraft", "capall#") // broke so pwd gets added locally
+            client.Authenticator = new HttpBasicAuthenticator("alvinashcraft", "lookitup") // broke so pwd gets added locally
             var request = new RestRequest($"{restResource}?limit={_options.MaxPostsOption}", Method.GET);
 
             IRestResponse response = client.Execute(request);
