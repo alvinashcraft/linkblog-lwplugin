@@ -185,12 +185,12 @@ namespace AlvinAshcraft.LinkBuilder
         /// <returns>System.String.</returns>
         private static string AppendMvpIdToUrl(string url)
         {
-            if ((url.Contains("blogs.msdn.com") || url.Contains("channel9.msdn.com") ||
+            if ((url.Contains("blogs.msdn.com") || (url.Contains("msdn.microsoft.com") ||
                 url.Contains("devblogs.microsoft.com") || url.Contains("docs.microsoft.com") ||
-                url.Contains("social.technet.microsoft.com") || url.Contains("azure.microsoft.com") ||
-                url.Contains("techcommunity.microsoft.com") || url.Contains("social.msdn.microsoft.com") ||
+                url.Contains("weblogs.asp.net") || url.Contains("azure.microsoft.com") ||
+                url.Contains("techcommunity.microsoft.com") || url.Contains("technet.microsoft.com") ||
                 url.Contains("developer.microsoft.com") || url.Contains("cloudblogs.microsoft.com") ||
-                url.Contains("microsoft.com/handsonlabs") || url.Contains("weblogs.asp.net")) 
+                url.Contains("microsoft.com/handsonlabs") || (url.Contains("channel9.msdn.com")) 
                 && !url.Contains("?"))
             {
                 url = url + "?WT.mc_id=DOP-MVP-4025064";
