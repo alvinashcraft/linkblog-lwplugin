@@ -15,6 +15,7 @@
         Miscellaneous,
         Links,
         Top,
-        Shelf
+        Shelf,
+        Videos
     }
 }

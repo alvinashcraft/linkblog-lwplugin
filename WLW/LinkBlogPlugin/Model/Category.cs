@@ -52,13 +52,13 @@
                 case CategoryType.Mobile:
                     return "Mobile, IoT & Game Development";
                 case CategoryType.Podcasts:
-                    return "Podcasts, Screencasts & Videos";
+                    return "Podcasts";
                 case CategoryType.Community:
                     return "Community & Events";
                 case CategoryType.Sql:
                     return "Database";
                 case CategoryType.SharePoint:
-                    return "SharePoint & MS Teams";
+                    return "SharePoint, M365 & MS Teams";
                 case CategoryType.PowerShell:
                     return "PowerShell";
                 case CategoryType.Miscellaneous:
@@ -69,6 +69,8 @@
                     return "Top Links";
                 case CategoryType.Shelf:
                     return "The Geek Shelf";
+                case CategoryType.Videos:
+                    return "Screencasts & Videos";
                 default:
                     return "Miscellaneous";
             }
@@ -90,6 +92,8 @@
                     return "mobile";
                 case CategoryType.Podcasts:
                     return "podcasts";
+                case CategoryType.Videos:
+                    return "videos";
                 case CategoryType.Community:
                     return "events";
                 case CategoryType.Sql:

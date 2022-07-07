@@ -167,8 +167,6 @@ namespace AlvinAshcraft.LinkBuilder
                 {
                     string url = entry.Url;
 
-                    url = AppendMvpIdToUrl(url);
-
                     linkListing.Append($"<p><a href=\"{url}\" target=\"_blank\">{entry.Title}</a> ({entry.AuthorInfo.AuthorName})</p>");
                 }
 
@@ -176,32 +174,6 @@ namespace AlvinAshcraft.LinkBuilder
             });
 
             return linkListing.ToString();
-        }
-
-        /// <summary>
-        /// Appends an MVP identifier to the URL.
-        /// </summary>
-        /// <param name="url">The URL.</param>
-        /// <returns>System.String.</returns>
-        private static string AppendMvpIdToUrl(string url)
-        {
-            if ((url.Contains("blogs.msdn.com") || url.Contains("msdn.microsoft.com") ||
-                url.Contains("devblogs.microsoft.com") || url.Contains("docs.microsoft.com") ||
-                url.Contains("weblogs.asp.net") || url.Contains("azure.microsoft.com") ||
-                url.Contains("techcommunity.microsoft.com") || url.Contains("technet.microsoft.com") ||
-                url.Contains("developer.microsoft.com") || url.Contains("cloudblogs.microsoft.com") ||
-                url.Contains("microsoft.com/handsonlabs") || url.Contains("channel9.msdn.com")) 
-                && !url.Contains("?"))
-            {
-                url = url + "?WT.mc_id=DOP-MVP-4025064";
-            }
-
-            if (url.Contains("blogs.windows.com") && !url.Contains("?"))
-            {
-                url = url + "?WT.mc_id=WD-MVP-4025064";
-            }
-            
-            return url;
         }
 
         /// <summary>
@@ -295,7 +267,7 @@ namespace AlvinAshcraft.LinkBuilder
                     if (url.Contains("dbug")) return new AuthorResult("Brian Reindel", new Category());
                     break;
                 case "charles":
-                    if (url.Contains("channel9")) return new AuthorResult("Charles Torre", new Category(CategoryType.Podcasts));
+                    if (url.Contains("channel9")) return new AuthorResult("Charles Torre", new Category(CategoryType.Videos));
                     break;
                 case "arvind":
                     if (url.Contains("zoho")) return new AuthorResult("Arvind Natarajan", new Category());
@@ -400,6 +372,7 @@ namespace AlvinAshcraft.LinkBuilder
                 new Category(CategoryType.DotNet),
                 new Category(CategoryType.Design),
                 new Category(CategoryType.Mobile),
+                new Category(CategoryType.Videos),
                 new Category(CategoryType.Podcasts),
                 new Category(CategoryType.Community),
                 new Category(CategoryType.Sql),
