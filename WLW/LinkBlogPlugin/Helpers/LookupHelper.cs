@@ -104,6 +104,11 @@ namespace AlvinAshcraft.LinkBuilder.Helpers
         /// <returns>An author result for the lookup.</returns>
         public AuthorResult GetAuthorInfoByUrl(string authorName, string url)
         {
+            if (url.Contains("youtube.com"))
+            {
+                return new AuthorResult(authorName, new Category(CategoryType.Videos));
+            }
+
             var result = _urlContainsLookupDictionary.Keys.FirstOrDefault(url.Contains);
 
             return !string.IsNullOrWhiteSpace(result)
