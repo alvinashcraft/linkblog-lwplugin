@@ -120,7 +120,7 @@ namespace AlvinAshcraft.LinkBuilder
 
                 var items =
                     feedFormatter.Feed.Items.OfType<SyndicationItem>()
-                        .Where(item => item.LastUpdatedTime.DateTime > GetLastBlogDate(false).AddHours(_options.BufferOption * -1))
+                        .Where(item => item.LastUpdatedTime.DateTime > GetLastBlogPostDateOnline())
                         .OrderBy(item => item.Authors.FirstOrDefault().Name)
                         .ThenBy(item => item.LastUpdatedTime.DateTime)
                         .Select(item =>
@@ -136,6 +136,35 @@ namespace AlvinAshcraft.LinkBuilder
                 newContent = BuildContent(items.ToList());
 
                 return newContent;
+            }
+        }
+
+        private DateTime GetLastBlogPostDateOnline()
+        {
+            var xmlSettings = new XmlReaderSettings
+            {
+                DtdProcessing = DtdProcessing.Parse
+            };
+
+            var feedFormatter = new Rss20FeedFormatter();
+            string feedUrl = "https://www.alvinashcraft.com/feed/";
+
+            using (var reader = XmlReader.Create($"{feedUrl}?n=5", xmlSettings))
+            {
+                if (feedFormatter == null || !feedFormatter.CanRead(reader))
+                {
+                    return DateTime.Now.AddDays(-1).AddHours(_options.BufferOption * -1);
+                }
+
+                feedFormatter.ReadFrom(reader);
+
+                var lastDate =
+                    feedFormatter.Feed.Items.OfType<SyndicationItem>()
+                        .Where(item => item.Title.Text.ToLower().Contains(_options.PostPrefixOption.ToLower()))
+                        .OrderByDescending(item => item.LastUpdatedTime.DateTime)
+                        .FirstOrDefault().PublishDate;
+
+                return lastDate.LocalDateTime;
             }
         }
   
@@ -336,26 +365,6 @@ namespace AlvinAshcraft.LinkBuilder
         private AuthorResult CheckUrlContains(string authorName, string url)
         {
             return _lookupHelper.GetAuthorInfoByUrl(authorName, url);
-        }
-
-        /// <summary>
-        /// Gets the last blog date.
-        /// </summary>
-        /// <returns>DateTime of the last blog posting.</returns>
-        private DateTime GetLastBlogDate(bool convertToUtc)
-        {
-            IEnumerable<FileInfo> theFiles = GetFiles(_options.PostPathOption, ".wpost");
-
-            var files = from file in theFiles
-                        where file.Name.Contains(_options.PostPrefixOption)
-                        orderby file.CreationTime descending
-                        select file;
-
-            List<FileInfo> matchingFiles = files.ToList();
-
-            DateTime localDateTime = matchingFiles.Count > 0 ? matchingFiles[0].CreationTime : DateTime.Now.AddDays(-1);
-
-            return convertToUtc ? localDateTime.ToUniversalTime() : localDateTime;
         }
 
         /// <summary>
